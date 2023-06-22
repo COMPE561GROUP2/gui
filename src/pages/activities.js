@@ -1,8 +1,6 @@
-
-
-const activities = () => {
-    return (
-      <>
+const Activities = () => {
+  return (
+    <>
       <link rel="stylesheet" href="prototype_ss.css" />
       <title>Touch Grass - Activities</title>
       <meta charSet="utf-8" />
@@ -17,62 +15,10 @@ const activities = () => {
       <style
         dangerouslySetInnerHTML={{
           __html:
-            "\n            /* Modify the background color */\n            \n            .navbar-custom {\n                background-color: rgb(163, 207, 187);\n            }\n        /* Modify brand and text color */\n\n            .navbar-custom .navbar-brand,\n        .navbar-custom .nav-link,\n        .navbar-custom .navbar-nav,\n            .navbar-custom .navbar-text {\n                color: green;\n            }\n            \n        "
+            "\n            /* Modify the background color */\n            \n            .navbar-custom {\n                background-color: rgb(163, 207, 187);\n            }\n        /* Modify brand and text color */\n\n            .navbar-custom .navbar-brand,\n        .navbar-custom .nav-link,\n        .navbar-custom .navbar-nav,\n            .navbar-custom .navbar-text {\n                color: green;\n            }\n            \n        ",
         }}
       />
-      <nav className="navbar navbar-expand-lg navbar-custom">
-        <div className="container-fluid">
-          <img
-            src="/src/assets/OutdoorLogo.png"
-            alt="Bootstrap"
-            width={45}
-            height={40}
-          />
-          <a className="navbar-brand" href="#">
-            TouchGrass
-          </a>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#Activities">
-                  Activities
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Blog
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Help
-                </a>
-              </li>
-            </ul>
-          </div>
-          <ul>
-            <button type="button" className="btn btn-success">
-              Log In
-            </button>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon" />
-            </button>
-          </ul>
-        </div>
-      </nav>
+
       <section>
         <div className="container">
           <h1 style={{ textAlign: "center", paddingTop: "5%" }}>
@@ -109,8 +55,8 @@ const activities = () => {
                 <div className="card-body">
                   <h5 className="card-title">Card title</h5>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make up
-                    the bulk of the card's content.
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
                   </p>
                   <button href="#" className="btn btn-primary">
                     Go somewhere
@@ -144,8 +90,8 @@ const activities = () => {
                 <div className="card-body">
                   <h5 className="card-title">Card title</h5>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make up
-                    the bulk of the card's content.
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
                   </p>
                   <button href="#" className="btn btn-primary">
                     Go somewhere
@@ -179,8 +125,8 @@ const activities = () => {
                 <div className="card-body">
                   <h5 className="card-title">Card title</h5>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make up
-                    the bulk of the card's content.
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
                   </p>
                   <button href="#" className="btn btn-primary">
                     Go somewhere
@@ -208,8 +154,7 @@ const activities = () => {
         </div>
       </section>
     </>
-    
-    )
-}
+  );
+};
 
-export default activities
+export default Activities;
