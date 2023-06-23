@@ -12,28 +12,52 @@ import Navbar from "./elements/Navbar.js";
 
 import logo from "./logo.svg";
 
+import axios from "axios";
+import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-function App() {
-  return (
-    <div id="page-container">
-      <Navbar />
+import PrivateRoute from "./utils/PrivateRoute";
+import { AuthProvider } from "./context/AuthContext";
 
-      <div id="content-wrap">
-        <Routes>
-          <Route exact path="home" element={<Home />} />
-          <Route exact path="help" element={<Help />} />
-          <Route exact path="activities" element={<Activities />} />
-          <Route exact path="blog" element={<Blog />} />
-          <Route exact path="login" element={<Login />} />
-          <Route exact path="register" element={<Register />} />
-          <Route exact path="user_page" element={<User_page />} />
+class App extends React.Component {
+  state = { details: [] };
 
-          <Route path="*" element={<Navigate to="home" replace />} />
-        </Routes>
-      </div>
-    </div>
-  );
+  componentDidMount() {
+    let data;
+    axios
+      .get("http://localhost:8000")
+      .then((res) => {
+        data = res.data;
+        this.setState({
+          details: data,
+        });
+      })
+      .catch((err) => {});
+  }
+
+  render() {
+    return (
+      <AuthProvider>
+        <div id="page-container">
+          <Navbar />
+
+          <div id="content-wrap">
+            <Routes>
+              <Route exact path="home" element={<Home />} />
+              <Route exact path="help" element={<Help />} />
+              <Route exact path="activities" element={<Activities />} />
+              <Route exact path="blog" element={<Blog />} />
+              <Route exact path="login" element={<Login />} />
+              <Route exact path="register" element={<Register />} />
+              <Route exact path="user_page" element={<User_page />} />
+
+              <Route path="*" element={<Navigate to="home" replace />} />
+            </Routes>
+          </div>
+        </div>
+      </AuthProvider>
+    );
+  }
 }
 
 export default App;

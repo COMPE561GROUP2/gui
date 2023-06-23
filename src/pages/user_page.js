@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import AuthContext from "../context/AuthContext";
+
 const User_page = () => {
+  let { user } = useContext(AuthContext);
+
   return (
     <>
       <title>Touch Grass - Profile</title>
@@ -18,7 +23,9 @@ const User_page = () => {
         }}
       />
       <title>User Page</title>
-      <h1 className="head_user">User Page</h1>
+
+      {user && <h1 className="head_user">Hello {user.username}</h1>}
+
       <p id="demo" />
       <div className="icons_user">
         <img

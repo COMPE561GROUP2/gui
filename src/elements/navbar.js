@@ -1,5 +1,6 @@
 import { NavLink, Link, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
+import AuthContext from "../context/AuthContext";
 
 const Navbar = () => {
   const location = useLocation();
@@ -7,6 +8,8 @@ const Navbar = () => {
   const clickNav = () => {
     window.scrollTo(0, 0);
   };
+
+  let { user } = useContext(AuthContext);
 
   return (
     <>
@@ -91,8 +94,13 @@ const Navbar = () => {
           </div>
           <ul>
             <button type="button" className="btn btn-success">
-              <NavLink to="/login">Log In</NavLink>
+              {user ? (
+                <NavLink to="/home">Log Out</NavLink>
+              ) : (
+                <NavLink to="/login">Log In</NavLink>
+              )}
             </button>
+
             <button
               className="navbar-toggler"
               type="button"

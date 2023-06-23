@@ -1,4 +1,9 @@
+import React, { useContext } from "react";
+import AuthContext from "../context/AuthContext";
+
 const Login = () => {
+  let { loginUser } = useContext(AuthContext);
+
   return (
     <>
       <link rel="stylesheet" href="prototype_ss.css" />
@@ -21,14 +26,24 @@ const Login = () => {
       <br /> <br />
       <h2 className="loginTextHeader"> Please Enter Your Login Information </h2>
       <br /> <br />
-      <section className="loginSection">
+      <form className="loginSection" onSubmit={Login}>
         <label htmlFor="user_id"> Username or Email:</label>
         <br />
-        <input type="text" id="user_id" placeholder="Username or Email" />
+        <input
+          type="text"
+          name="username"
+          id="user_id"
+          placeholder="Username or Email"
+        />
         <br /> <br />
         <label htmlFor="password"> Password:</label>
         <br />
-        <input type="password" id="user_password" placeholder="Password" />
+        <input
+          type="password"
+          name="password"
+          id="user_password"
+          placeholder="Password"
+        />
         <br /> <br />
         <button type="submit" id="loginSubmitButton">
           Log In
@@ -37,7 +52,7 @@ const Login = () => {
         <button type="submit" id="registerRedirectButton">
           Register
         </button>
-      </section>
+      </form>
     </>
   );
 };
