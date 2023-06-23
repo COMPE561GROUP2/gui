@@ -26,14 +26,14 @@ const Login = () => {
       <br /> <br />
       <h2 className="loginTextHeader"> Please Enter Your Login Information </h2>
       <br /> <br />
-      <form className="loginSection" onSubmit={Login}>
+      <form className="loginSection" onSubmit={loginUser}>
         <label htmlFor="user_id"> Username or Email:</label>
         <br />
         <input
           type="text"
           name="username"
           id="user_id"
-          placeholder="Username or Email"
+          placeholder="Username"
         />
         <br /> <br />
         <label htmlFor="password"> Password:</label>
