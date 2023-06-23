@@ -1,6 +1,8 @@
 import { NavLink, Link, useLocation } from "react-router-dom";
 import { useEffect, useContext } from "react";
 import AuthContext from "../context/AuthContext";
+import logo from '../assets/OutdoorLogo.png';
+
 
 const Navbar = () => {
   const location = useLocation();
@@ -32,7 +34,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar-custom">
         <div className="container-fluid">
           <img
-            src="/src/assets/OutdoorLogo.png"
+            src={logo}
             alt="Bootstrap"
             width={45}
             height={40}
@@ -92,15 +94,14 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <ul>
+          <a>
             <button type="button" className="btn btn-success">
               {user ? (
-                <NavLink to="/home">Log Out</NavLink>
+                <NavLink to="/home" style={{ textDecoration: 'none',color:"green" }}>Log Out</NavLink>
               ) : (
-                <NavLink to="/login">Log In</NavLink>
+                <NavLink to="/login" style={{ textDecoration: 'none',color:"black" }}>Log In</NavLink>
               )}
             </button>
-
             <button
               className="navbar-toggler"
               type="button"
@@ -112,7 +113,7 @@ const Navbar = () => {
             >
               <span className="navbar-toggler-icon" />
             </button>
-          </ul>
+          </a>
         </div>
       </nav>
     </>

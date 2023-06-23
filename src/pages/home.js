@@ -1,3 +1,5 @@
+import photos from '../assets/index.js';
+
 const Home = () => {
   return (
     <>
@@ -23,7 +25,7 @@ const Home = () => {
         <div className="container">
           <h1 style={{ textAlign: "center", paddingTop: "5%" }}>
             {" "}
-            Find your outdoors
+            Find Your Outdoors
           </h1>
           <div className="input-group rounded pt-3">
             <input
@@ -48,7 +50,8 @@ const Home = () => {
             <div className="col-lg">
               <div className="card">
                 <img
-                  src="/src/assets/surf1.jpg"
+                  src={photos.home_pic1}
+                  //src = {require('../assets/hike1.jpg').default}
                   className="card-img-top"
                   alt="..."
                 />
@@ -67,7 +70,7 @@ const Home = () => {
             <div className="col-lg">
               <div className="card">
                 <img
-                  src="/src/assets/hike1.jpg"
+                  src={photos.home_pic2}
                   className="card-img-top"
                   alt="..."
                 />
@@ -86,7 +89,7 @@ const Home = () => {
             <div className="col-lg">
               <div className="card">
                 <img
-                  src="/src/assets/surf2.jpg"
+                  src={photos.home_pic3}
                   className="card-img-top"
                   alt="..."
                 />
