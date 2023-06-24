@@ -11,12 +11,7 @@ const Help = () => {
         crossOrigin="anonymous"
       />
       <link rel="stylesheet" href="prototype_ss.css" />
-      <style
-        dangerouslySetInnerHTML={{
-          __html:
-            "\n\t\t/* Modify the background color */\n\t\t\n\t\t.navbar-custom {\n\t\t\tbackground-color: rgb(163, 207, 187);\n\t\t}\n    /* Modify brand and text color */\n\n\t\t.navbar-custom .navbar-brand,\n    .navbar-custom .nav-link,\n    .navbar-custom .navbar-nav,\n\t\t.navbar-custom .navbar-text {\n\t\t\tcolor: green;\n\t\t}\n\t",
-        }}
-      />
+
       <h1 className="row h-100 justify-content-center align-items-center">
         {" "}
         Help &amp; FAQ

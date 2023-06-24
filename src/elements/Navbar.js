@@ -1,7 +1,7 @@
 import { NavLink, Link, useLocation } from "react-router-dom";
 import { useEffect, useContext } from "react";
 import AuthContext from "../context/AuthContext";
-import logo from '../assets/OutdoorLogo.png';
+import logo from "../assets/OutdoorLogo.png";
 
 const Navbar = () => {
   const location = useLocation();
@@ -27,20 +27,19 @@ const Navbar = () => {
       <style
         dangerouslySetInnerHTML={{
           __html:
-            "\n\t\t/* Modify the background color */\n\t\t\n\t\t.navbar-custom {\n\t\t\tbackground-color: rgb(163, 207, 187);\n\t\t}\n    /* Modify brand and text color */\n\n\t\t.navbar-custom .navbar-brand,\n    .navbar-custom .nav-link,\n    .navbar-custom .navbar-nav,\n\t\t.navbar-custom .navbar-text {\n\t\t\tcolor: green;\n\t\t}\n\t",
+            ".navbar-custom {background-color: rgb(163, 207, 187);} .navbar-custom .navbar-brand, .navbar-custom .nav-link,.navbar-custom .navbar-nav, .navbar-custom .navbar-text {color: green;}",
         }}
       />
       <nav className="navbar navbar-expand-lg navbar-custom">
         <div className="container-fluid">
-          <img
-            src={logo}
-            alt="Bootstrap"
-            width={45}
-            height={40}
-          />
-          <a className="navbar-brand" href="#">
+          <Link to="/home">
+            <img src={logo} alt="Bootstrap" width={45} height={40} />
+          </Link>
+
+          <NavLink className="navbar-brand" to="/home">
             TouchGrass
-          </a>
+          </NavLink>
+
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
@@ -93,26 +92,41 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a>
+
+          <section>
+            {/*Display Login button if user is not logged in
+               Display Logout button if user is logged in*/}
+
             <button type="button" className="btn btn-success">
               {user ? (
-                <NavLink to="/home" style={{ textDecoration: 'none',color:"green" }}>Log Out</NavLink>
+                <NavLink
+                  to="/home"
+                  style={{ textDecoration: "none", color: "green" }}
+                >
+                  Log Out
+                </NavLink>
               ) : (
-                <NavLink to="/login" style={{ textDecoration: 'none',color:"black" }}>Log In</NavLink>
+                <NavLink
+                  to="/login"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  Log In
+                </NavLink>
               )}
             </button>
+
             <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
               <span className="navbar-toggler-icon" />
             </button>
-          </a>
+          </section>
         </div>
       </nav>
     </>

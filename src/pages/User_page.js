@@ -16,12 +16,7 @@ const User_page = () => {
         crossOrigin="anonymous"
       />
       <link rel="stylesheet" href="prototype_ss.css" />
-      <style
-        dangerouslySetInnerHTML={{
-          __html:
-            "\n            /* Modify the background color */\n            \n            .navbar-custom {\n                background-color: rgb(163, 207, 187);\n            }\n        /* Modify brand and text color */\n\n            .navbar-custom .navbar-brand,\n        .navbar-custom .nav-link,\n        .navbar-custom .navbar-nav,\n            .navbar-custom .navbar-text {\n                color: green;\n            }\n        ",
-        }}
-      />
+
       <title>User Page</title>
 
       {user && <h1 className="head_user">Hello {user.username}</h1>}
@@ -58,6 +53,7 @@ const User_page = () => {
           <br /> <br />
         </form>
         <iframe
+          title="Map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429296.0065733395!2d-116.87039736647274!3d32.795572164421465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dbec2a1af657a5%3A0x65f0819e736d55d8!2sCleveland%20National%20Forest!5e0!3m2!1sen!2sus!4v1685648283501!5m2!1sen!2sus"
           style={{ border: 0 }}
           allowFullScreen=""

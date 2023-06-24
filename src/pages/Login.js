@@ -17,12 +17,6 @@ const Login = () => {
         crossOrigin="anonymous"
       />
       <link rel="stylesheet" href="prototype_ss.css" />
-      <style
-        dangerouslySetInnerHTML={{
-          __html:
-            "\n            /* Modify the background color */\n            \n            .navbar-custom {\n                background-color: rgb(163, 207, 187);\n            }\n        /* Modify brand and text color */\n\n            .navbar-custom .navbar-brand,\n        .navbar-custom .nav-link,\n        .navbar-custom .navbar-nav,\n            .navbar-custom .navbar-text {\n                color: green;\n            }\n        ",
-        }}
-      />
       <br /> <br />
       <h2 className="loginTextHeader"> Please Enter Your Login Information </h2>
       <br /> <br />

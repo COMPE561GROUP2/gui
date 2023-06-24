@@ -1,4 +1,4 @@
-import photos from '../assets/index.js';
+import photos from "../assets/index.js";
 
 const Home = () => {
   return (
@@ -14,12 +14,6 @@ const Home = () => {
         crossOrigin="anonymous"
       />
       <link rel="stylesheet" href="prototype_ss.css" />
-      <style
-        dangerouslySetInnerHTML={{
-          __html:
-            "\n            /* Modify the background color */\n            \n            .navbar-custom {\n                background-color: rgb(163, 207, 187);\n            }\n        /* Modify brand and text color */\n\n            .navbar-custom .navbar-brand,\n        .navbar-custom .nav-link,\n        .navbar-custom .navbar-nav,\n            .navbar-custom .navbar-text {\n                color: green;\n            }\n            \n        ",
-        }}
-      />
 
       <section>
         <div className="container">
@@ -108,7 +102,7 @@ const Home = () => {
           </div>
         </div>
         <div className="small text-center text-muted fst-italic">
-        Copyright © Touch Grass 2023
+          Copyright © Touch Grass 2023
         </div>
       </section>
     </>
