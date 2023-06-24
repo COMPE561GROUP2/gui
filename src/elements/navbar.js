@@ -3,7 +3,6 @@ import { useEffect, useContext } from "react";
 import AuthContext from "../context/AuthContext";
 import logo from '../assets/OutdoorLogo.png';
 
-
 const Navbar = () => {
   const location = useLocation();
 
@@ -103,14 +102,14 @@ const Navbar = () => {
               )}
             </button>
             <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
+                className="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
               <span className="navbar-toggler-icon" />
             </button>
           </a>
