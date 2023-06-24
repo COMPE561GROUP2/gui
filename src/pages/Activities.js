@@ -1,4 +1,4 @@
-import photos from "../assets/index.js";
+import images from "../assets/assets.js";
 
 const Activities = () => {
   return (
@@ -46,11 +46,7 @@ const Activities = () => {
           <div className="row">
             <div className="col-lg">
               <div className="card">
-                <img
-                  src={photos.home_pic2}
-                  className="card-img-top"
-                  alt="..."
-                />
+                <img src={images.surf1} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Surfing</h5>
                   <p className="card-text">
@@ -85,11 +81,7 @@ const Activities = () => {
 
             <div className="col-lg">
               <div className="card">
-                <img
-                  src={photos.home_pic1}
-                  className="card-img-top"
-                  alt="..."
-                />
+                <img src={images.hike1} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Hiking</h5>
                   <p className="card-text">
@@ -124,11 +116,7 @@ const Activities = () => {
 
             <div className="col-lg">
               <div className="card">
-                <img
-                  src="/src/assets/surf2.jpg"
-                  className="card-img-top"
-                  alt="..."
-                />
+                <img src={images.ski1} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Card title</h5>
                   <p className="card-text">

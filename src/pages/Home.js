@@ -1,4 +1,4 @@
-import photos from "../assets/index.js";
+import images from "../assets/assets.js";
 
 const Home = () => {
   return (
@@ -44,7 +44,7 @@ const Home = () => {
             <div className="col-lg">
               <div className="card">
                 <img
-                  src={photos.home_pic1}
+                  src={images.hike1}
                   //src = {require('../assets/hike1.jpg').default}
                   className="card-img-top"
                   alt="..."
@@ -63,11 +63,7 @@ const Home = () => {
             </div>
             <div className="col-lg">
               <div className="card">
-                <img
-                  src={photos.home_pic2}
-                  className="card-img-top"
-                  alt="..."
-                />
+                <img src={images.surf1} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Card title</h5>
                   <p className="card-text">
@@ -82,11 +78,7 @@ const Home = () => {
             </div>
             <div className="col-lg">
               <div className="card">
-                <img
-                  src={photos.home_pic3}
-                  className="card-img-top"
-                  alt="..."
-                />
+                <img src={images.hike2} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Card title</h5>
                   <p className="card-text">
