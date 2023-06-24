@@ -38,21 +38,23 @@ class App extends React.Component {
   render() {
     return (
       <AuthProvider>
-        <div id="page-container" className="background-main">
-          <Navbar />
+        <div className="background-main fullscreen">
+          <div id="page-container">
+            <Navbar />
 
-          <div id="content-wrap">
-            <Routes>
-              <Route exact path="home" element={<Home />} />
-              <Route exact path="help" element={<Help />} />
-              <Route exact path="activities" element={<Activities />} />
-              <Route exact path="blog" element={<Blog />} />
-              <Route exact path="login" element={<Login />} />
-              <Route exact path="register" element={<Register />} />
-              <Route exact path="userpage" element={<UserPage />} />
+            <div id="content-wrap">
+              <Routes>
+                <Route exact path="home" element={<Home />} />
+                <Route exact path="help" element={<Help />} />
+                <Route exact path="activities" element={<Activities />} />
+                <Route exact path="blog" element={<Blog />} />
+                <Route exact path="login" element={<Login />} />
+                <Route exact path="register" element={<Register />} />
+                <Route exact path="userpage" element={<UserPage />} />
 
-              <Route path="*" element={<Navigate to="home" replace />} />
-            </Routes>
+                <Route path="*" element={<Navigate to="home" replace />} />
+              </Routes>
+            </div>
           </div>
         </div>
       </AuthProvider>

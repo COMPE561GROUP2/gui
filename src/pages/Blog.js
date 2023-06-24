@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const Blog = () => {
   return (
     <>
@@ -66,14 +68,17 @@ const Blog = () => {
                   Problems look mighty small from 150 miles up
                 </h3>
               </a>
+
               <p className="post-meta">
                 Posted by
-                <a href="#!">Joe Smith</a>
+                <NavLink to="/UserPage">Joe Smith</NavLink>
                 on September 24, 2023
               </p>
             </div>
+
             {/* Divider*/}
             <hr className="my-4" />
+
             {/* Post preview*/}
             <div className="post-preview">
               <a href="post.html">
@@ -82,14 +87,17 @@ const Blog = () => {
                   don't intend to waste any of mine.
                 </h2>
               </a>
+
               <p className="post-meta">
                 Posted by
-                <a href="#!">Mary Littlelamb</a>
+                <NavLink to="/UserPage">Mary Littlelamb</NavLink>
                 on September 18, 2023
               </p>
             </div>
+
             {/* Divider*/}
             <hr className="my-4" />
+
             {/* Post preview*/}
             <div className="post-preview">
               <a href="post.html">
@@ -101,14 +109,17 @@ const Blog = () => {
                   for the next ten.
                 </h3>
               </a>
+
               <p className="post-meta">
                 Posted by
-                <a href="#!">Bill Chill</a>
+                <NavLink to="/UserPage">Bill Chill</NavLink>
                 on August 24, 2023
               </p>
             </div>
+
             {/* Divider*/}
             <hr className="my-4" />
+
             {/* Post preview*/}
             <div className="post-preview">
               <a href="post.html">
@@ -120,12 +131,14 @@ const Blog = () => {
               </a>
               <p className="post-meta">
                 Posted by
-                <a href="#!">Ugur Dogan</a>
+                <NavLink to="/UserPage">Ugur Dogan</NavLink>
                 on July 8, 2023
               </p>
             </div>
+
             {/* Divider*/}
             <hr className="my-4" />
+
             {/* Pager*/}
             <div className="d-flex justify-content-end mb-4">
               <a className="btn btn-primary text-uppercase" href="#!">
@@ -135,6 +148,7 @@ const Blog = () => {
           </div>
         </div>
       </div>
+
       {/* Footer*/}
       <footer className="border-top">
         <div className="container px-4 px-lg-5">

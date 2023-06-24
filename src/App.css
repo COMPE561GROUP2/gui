@@ -77,6 +77,10 @@
   background-color: rgba(185, 226, 212, 0.616);
 }
 
+.fullscreen {
+  height: 100vh;
+}
+
 li {
   float: left;
 }
