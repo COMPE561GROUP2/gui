@@ -38,7 +38,7 @@ class App extends React.Component {
   render() {
     return (
       <AuthProvider>
-        <div id="page-container">
+        <div id="page-container" className="background-main">
           <Navbar />
 
           <div id="content-wrap">

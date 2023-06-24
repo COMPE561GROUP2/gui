@@ -36,3 +36,59 @@
     transform: rotate(360deg);
   }
 }
+
+.head_user {
+  text-align: center;
+  margin: 30px;
+  font-size: 50px;
+}
+.center {
+  text-align: center;
+}
+.inline_user {
+  display: inline-flex;
+}
+.icons_user {
+  text-align: center;
+  margin: 30px;
+}
+
+.navBar {
+  background-color: rgb(163, 207, 187);
+}
+
+.navBar_Text {
+  color: green;
+}
+
+.loginTextHeader {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #084300;
+}
+
+.loginSection {
+  text-align: center;
+}
+
+/*    type selectors      */
+
+.background-main {
+  background-color: rgba(185, 226, 212, 0.616);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #b13636;
+}
