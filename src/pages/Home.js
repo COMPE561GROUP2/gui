@@ -38,7 +38,7 @@ const Home = () => {
         </div>
       </section>
       <section id="Activities">
-        <h2 className="text-center my-3">Activities</h2>
+        <h2 className="text-center my-3">Top 3 Local Favorites</h2>
         <div className="container">
           <div className="row">
             <div className="col-lg">
