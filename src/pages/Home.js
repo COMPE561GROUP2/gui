@@ -91,9 +91,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="small text-center text-muted fst-italic">
-          Copyright © Touch Grass 2023
-        </div>
       </section>
     </>
   );

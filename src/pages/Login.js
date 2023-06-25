@@ -15,37 +15,41 @@ const Login = () => {
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
         crossOrigin="anonymous"
       />
-      <link rel="stylesheet" href="prototype_ss.css" />
-      <br /> <br />
-      <h2 className="loginTextHeader"> Please Enter Your Login Information </h2>
-      <br /> <br />
-      <form className="loginSection" onSubmit={loginUser}>
-        <label htmlFor="user_id"> Username or Email:</label>
-        <br />
-        <input
-          type="text"
-          name="username"
-          id="user_id"
-          placeholder="Username"
-        />
+      <div className="body">
         <br /> <br />
-        <label htmlFor="password"> Password:</label>
-        <br />
-        <input
-          type="password"
-          name="password"
-          id="user_password"
-          placeholder="Password"
-        />
+        <h2 className="loginTextHeader">
+          {" "}
+          Please Enter Your Login Information{" "}
+        </h2>
         <br /> <br />
-        <button type="submit" id="loginSubmitButton">
-          Log In
-        </button>
-        <br /> <br />
-        <button type="submit" id="registerRedirectButton">
-          Register
-        </button>
-      </form>
+        <form className="loginSection" onSubmit={loginUser}>
+          <label htmlFor="user_id"> Username or Email:</label>
+          <br />
+          <input
+            type="text"
+            name="username"
+            id="user_id"
+            placeholder="Username"
+          />
+          <br /> <br />
+          <label htmlFor="password"> Password:</label>
+          <br />
+          <input
+            type="password"
+            name="password"
+            id="user_password"
+            placeholder="Password"
+          />
+          <br /> <br />
+          <button type="submit" id="loginSubmitButton">
+            Log In
+          </button>
+          <br /> <br />
+          <button type="submit" id="registerRedirectButton">
+            Register
+          </button>
+        </form>
+      </div>
     </>
   );
 };

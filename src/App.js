@@ -9,6 +9,7 @@ import Activities from "./pages/Activities.js";
 import UserPage from "./pages/UserPage.js";
 
 import Navbar from "./elements/Navbar.js";
+import Footer from "./elements/Footer.js"
 
 import logo from "./logo.svg";
 
@@ -55,6 +56,8 @@ class App extends React.Component {
                 <Route path="*" element={<Navigate to="home" replace />} />
               </Routes>
             </div>
+
+            <Footer />
           </div>
         </div>
       </AuthProvider>
