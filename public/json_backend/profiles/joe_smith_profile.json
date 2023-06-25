@@ -1,0 +1,13 @@
+{
+  "username": "joe_smith",
+  "email": "joesmith@aol.com",
+  "firstName": "Joe",
+  "lastName": "Smith",
+  "age": 30,
+  "address": {
+    "street": "123 Main Street",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10001"
+  }
+}

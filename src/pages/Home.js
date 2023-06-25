@@ -12,7 +12,6 @@ const Home = () => {
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
         crossOrigin="anonymous"
       />
-      <link rel="stylesheet" href="prototype_ss.css" />
 
       <section>
         <div className="container">

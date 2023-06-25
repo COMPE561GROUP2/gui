@@ -1,14 +1,35 @@
 import { useContext, useEffect, useState } from "react";
+import axios from "axios";
+
 import AuthContext from "../context/AuthContext";
+
+import images from "../assets/assets.js";
 
 const UserPage = () => {
   let { user } = useContext(AuthContext);
 
-  let { profile, setProfile } = useState(null);
+  const [profile, setProfile] = useState([]);
+
+  const getProfile = () => {
+    fetch("/json_backend/profiles/joe_smith_profile.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then(function (response) {
+        console.log(response);
+        return response.json();
+      })
+      .then(function (profile_json) {
+        console.log(profile_json);
+        setProfile(profile_json);
+      });
+  };
 
   useEffect(() => {
-    fetch("./json_backend/profiles/");
-  });
+    getProfile();
+  }, []);
 
   return (
     <>
@@ -24,20 +45,20 @@ const UserPage = () => {
 
       <title>User Page</title>
 
-      {user && <h1 className="head_user">Hello {user.username}</h1>}
+      <h1 className="head_user">{profile.firstName}'s Profile</h1>
 
       <p id="demo" />
       <div className="icons_user">
         <img
           className="icons_user"
-          src="../assets/hike_logo.jpg"
+          src={images.hike_logo}
           alt="Flowers in Chania"
           width={250}
           height={250}
         />
         <img
           className="icons_user"
-          src="../assets/surf_logo.jpg"
+          src={images.surf_logo}
           alt="Flowers in Chania"
           width={250}
           height={250}

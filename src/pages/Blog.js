@@ -25,7 +25,6 @@ const Blog = () => {
         type="text/css"
       />
       {/* Core theme CSS (includes Bootstrap)*/}
-      <link href="css/styles.css" rel="stylesheet" />
       <title>Touch Grass</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
