@@ -6,7 +6,6 @@ const Login = () => {
 
   return (
     <>
-      <link rel="stylesheet" href="prototype_ss.css" />
       <title>Touch Grass - Login</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
