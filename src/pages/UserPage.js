@@ -1,8 +1,14 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import AuthContext from "../context/AuthContext";
 
 const UserPage = () => {
   let { user } = useContext(AuthContext);
+
+  let { profile, setProfile } = useState(null);
+
+  useEffect(() => {
+    fetch("./json_backend/profiles/");
+  });
 
   return (
     <>
@@ -15,7 +21,6 @@ const UserPage = () => {
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
         crossOrigin="anonymous"
       />
-      <link rel="stylesheet" href="prototype_ss.css" />
 
       <title>User Page</title>
 

@@ -10,7 +10,6 @@ const Help = () => {
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
         crossOrigin="anonymous"
       />
-      <link rel="stylesheet" href="prototype_ss.css" />
 
       <h1 className="row h-100 justify-content-center align-items-center">
         {" "}
