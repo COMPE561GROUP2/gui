@@ -52,19 +52,20 @@ const UserPage = () => {
         <img
           className="icons_user"
           src={images.hike_logo}
-          alt="Flowers in Chania"
+          alt="Custom 1"
           width={250}
           height={250}
         />
         <img
           className="icons_user"
           src={images.surf_logo}
-          alt="Flowers in Chania"
+          alt="Custom 2"
           width={250}
           height={250}
         />
       </div>
       <p />
+
       <div className="inline_user">
         <form>
           <label htmlFor="post_head"> Post Header: </label>
@@ -89,6 +90,7 @@ const UserPage = () => {
           height={350}
         />
       </div>
+
     </>
   );
 };

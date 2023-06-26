@@ -1,0 +1,13 @@
+{
+  "username": "mary_has_a_lamb",
+  "email": "maryll@aol.com",
+  "firstName": "Mary",
+  "lastName": "Littlelamb",
+  "age": 22,
+  "address": {
+    "street": "456 Oak Place",
+    "city": "Denver",
+    "state": "CO",
+    "postalCode": "99999"
+  }
+}

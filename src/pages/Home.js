@@ -43,7 +43,6 @@ const Home = () => {
               <div className="card">
                 <img
                   src={images.hike1}
-                  //src = {require('../assets/hike1.jpg').default}
                   className="card-img-top"
                   alt="..."
                 />
@@ -90,9 +89,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="small text-center text-muted fst-italic">
-          Copyright © Touch Grass 2023
         </div>
       </section>
     </>

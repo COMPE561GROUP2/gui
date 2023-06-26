@@ -1,4 +1,5 @@
 import images from "../assets/assets.js";
+import { NavLink } from "react-router-dom";
 
 const Activities = () => {
   return (
@@ -35,7 +36,9 @@ const Activities = () => {
           </div>
           <br />
         </div>
+
       </section>
+
       <section id="Activities">
         <h2 className="text-center my-3">Your Top Activities</h2>
 
@@ -52,8 +55,10 @@ const Activities = () => {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <button href="#" className="btn btn-primary">
-                    Go somewhere
+                  <button style={{border: 'none'}}> 
+                    <NavLink to="/Set_activity"  className="btn btn-primary">
+                    La Jolla Scripps
+                    </NavLink>
                   </button>
                   <br /> <br />
                   <iframe
