@@ -16,18 +16,18 @@ const Login = () => {
       .then(function (response) {
         console.log(response);
         return response.json();
-      })
+      });
   }
 
   const [input, setInput] = useState([])
 
-  const authUser = () => {
+  const authUser = async () => {
 
     let userID = input.userID, userPassword = input.userPassword, userName = null, userEmail = null;
     let i;
     let userIDnum;
     let userEmailValid, userNameValid, userPasswordValid;
-    const users = getRegisteredUsers();
+    const users = await getRegisteredUsers();
 
     
 
@@ -77,7 +77,8 @@ const Login = () => {
   console.log(userEmail);
   console.log(userPassword);
     
-  return [userEmailValid, userNameValid, userPasswordValid];
+    if(userPasswordValid && userNameValid && userEmailValid)
+      alert("Logged in seccessfully!")
   }
 
 
@@ -101,10 +102,14 @@ const Login = () => {
         </h2>
         <br /> <br />
         <form className="loginSection" onSubmit={(e) =>
-      setInput({
+      setInput(
+        {
         userID: e.target.userID.value,
         userPassword: e.target.password.value,
-      }) & authUser()}>
+        },
+       () => authUser()
+       )
+       }>
           <label htmlFor="userID"> Username or Email:</label>
           <br />
           <input
