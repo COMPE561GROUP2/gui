@@ -23,7 +23,7 @@ const Login = () => {
 
   const authUser = () => {
 
-    let userID, userPassword = null, userName = null, userEmail = null;
+    let userID = input.userID, userPassword = input.userPassword, userName = null, userEmail = null;
     let i;
     let userIDnum;
     let userEmailValid, userNameValid, userPasswordValid;
