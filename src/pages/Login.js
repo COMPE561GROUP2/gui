@@ -2,12 +2,11 @@ import React, { useContext, useState, useEffect } from "react";
 import AuthContext from "../context/AuthContext";
 import { NavLink } from "react-router-dom";
 
-import isValidEmail from "../utils/Validation";
+import { isValidEmail } from "../utils/Validation";
 
 const Login = () => {
   let { loginUser } = useContext(AuthContext);
 
-  const [auth, setAuth] = useState([]);
   const [input, setInput] = useState([]);
 
   const getRegisteredUsers = async () => {

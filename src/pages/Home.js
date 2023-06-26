@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import images from "../assets/assets.js";
 
 const Home = () => {
@@ -52,8 +53,10 @@ const Home = () => {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <button href="#" className="btn btn-primary">
-                    Go somewhere
+                  <button style={{border: 'none'}}> 
+                    <NavLink to="/Locate_activity"  className="btn btn-success">
+                    Go Somewhere
+                    </NavLink>
                   </button>
                 </div>
               </div>
@@ -67,8 +70,10 @@ const Home = () => {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <button href="#" className="btn btn-primary">
-                    Go somewhere
+                  <button style={{border: 'none'}}> 
+                    <NavLink to="/Locate_activity"  className="btn btn-success">
+                    Go Somewhere
+                    </NavLink>
                   </button>
                 </div>
               </div>
@@ -82,8 +87,10 @@ const Home = () => {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <button href="#" className="btn btn-primary">
-                    Go somewhere
+                  <button style={{border: 'none'}}> 
+                    <NavLink to="/Locate_activity"  className="btn btn-success">
+                    Go Somewhere
+                    </NavLink>
                   </button>
                 </div>
               </div>
