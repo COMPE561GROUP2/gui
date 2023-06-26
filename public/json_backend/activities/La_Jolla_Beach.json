@@ -1,5 +1,5 @@
 {
-  "activity_name": "La Jolla Scripps",
+  "name": "La Jolla Scripps",
   "address": {
     "street": "8500 El Paseo Grande",
     "city": "San Diego",
@@ -7,3 +7,5 @@
     "postalCode": "92037"
   }
 }
+
+

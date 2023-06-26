@@ -1,6 +1,36 @@
+import { useContext, useEffect, useState } from "react";
+import axios from "axios";
+
+import AuthContext from "../context/AuthContext";
+
 import images from "../assets/assets.js";
 
-const Set_Activities = () => {
+const LocatePage = () => {
+  let { activities } = useContext(AuthContext);
+
+  const [activity, setActivity] = useState([]);
+
+  const getActivity = () => {
+    fetch("/json_backend/activities/La_Jolla_Beach.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then(function (response) {
+        console.log(response);
+        return response.json();
+      })
+      .then(function (activity_json) {
+        console.log(activity_json);
+        setActivity(activity_json);
+      });
+  };
+
+  useEffect(() => {
+    getActivity();
+  }, []);
+
   return (
     <>
       <title>Touch Grass - Activities</title>
@@ -14,28 +44,38 @@ const Set_Activities = () => {
       />
 
         <section>
-            <div class="container-fluid">
-            <div class="card bg-dark text-white w-50 mx-auto">
-            <img src={images.surf1} class="card-img" alt="..." style={{height:400}} />
-            <div class="card-img-overlay d-flex align-items-end">
-                <h2 class="card-title">Card title</h2>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            </div>
+            <div className="container-fluid rounded pt-5">
+              <div className="card bg-dark text-white w-50 mx-auto">
+              <img src={images.surf1} class="card-img-rounded-0" alt="..." style={{height:400}}/>
+              <div className="card-img-overlay">
+                  <h1 className="card-title">{activity.name}'s activity</h1>
+                  <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
 
-            <div class="card">
-            <div class="card-body w-50 mx-auto">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button class="card-link" href="#" className="btn btn-success">Card link</button>
-                <button class="card-link" href="#" className="btn btn-success">Another link</button>
-            </div>
-            </div>
+              <div className="card rounded-0">
+              <div className="card-header w-100 mx-auto">
+                <ul className="nav nav-tabs card-header-tabs">
+                  <li className="nav-item">
+                    <a className="nav-link active" aria-current="true" href="#">Description</a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">Waypoints</a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#" tabindex="-1" aria-disabled="true">Conditions</a>
+                  </li>
+                </ul>
+                </div>
+                <div className="card-body" style={{height:400}}>
+                  <h5 className="card-title">Special title treatment</h5>
+                  <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+              </div>
             </div>
         </section>
     </>
   );
 };
 
-export default Set_Activities;
+export default LocatePage;
