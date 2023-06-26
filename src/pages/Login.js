@@ -77,8 +77,15 @@ const Login = () => {
   console.log(userEmail);
   console.log(userPassword);
     
-    if(userPasswordValid && userNameValid && userEmailValid)
-      alert("Logged in seccessfully!")
+    if (!userPasswordValid) {
+      alert("Password is invalid");
+    }
+    else if (!(userEmailValid && userNameValid)) {
+      alert("Username or Email is invalid. Please register with us instead!");
+    }
+    else {
+      alert("Loggin Successful!");
+    }
   }
 
 
