@@ -1,5 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
 import AuthContext from "../context/AuthContext";
+import { NavLink } from "react-router-dom";
+
+import isValidEmail from "../utils/Validation";
 
 const Login = () => {
   let { loginUser } = useContext(AuthContext);
@@ -28,12 +31,10 @@ const Login = () => {
     let userEmailValid, userNameValid, userPasswordValid;
     const users = await getRegisteredUsers();
 
-    for (i = 0; i < userID.length - 1; i++) {
-      if (userID[i] === "@") {
-        userEmail = userID;
-        break;
-      }
-    }
+    if(isValidEmail(userID))
+      userEmail = userID
+    else
+      userName = userID
 
     if (userEmail === null) userName = userID;
 
@@ -72,7 +73,7 @@ const Login = () => {
     } else if (!(userEmailValid && userNameValid)) {
       alert("Username or Email is invalid. Please register with us instead!");
     } else {
-      alert("Loggin Successful!");
+      alert("Login Successful!");
     }
   };
 
@@ -130,9 +131,10 @@ const Login = () => {
             Log In
           </button>
           <br /> <br />
-          <button type="submit" id="registerRedirectButton">
-            Register
-          </button>
+    <NavLink to="/Register">
+    <button>Register</button>
+    
+    </NavLink>
         </form>
       </div>
     </>
