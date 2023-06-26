@@ -8,7 +8,19 @@ import images from "../assets/assets.js";
 const UserPage = () => {
   let { user } = useContext(AuthContext);
 
-  const [profile, setProfile] = useState([]);
+  const [profile, setProfile] = useState({
+    username: "joe_smith",
+    email: "joesmith@aol.com",
+    firstName: "Joe",
+    lastName: "Smith",
+    age: 30,
+    address: {
+      street: "123 Main Street",
+      city: "New York",
+      state: "NY",
+      postalCode: "10001",
+    },
+  });
 
   const getProfile = () => {
     fetch("/json_backend/profiles/joe_smith_profile.json", {
