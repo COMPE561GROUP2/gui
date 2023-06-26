@@ -46,6 +46,7 @@ const Register = () => {
 
   return (
     <>
+      <div className="container-fluid" style={{height: 1000}}>
       <title>Touch Grass - Register</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -102,7 +103,7 @@ const Register = () => {
           type="password"
           name="password1"
           id="user_password1"
-          placeholder="Password1"
+          placeholder="Password"
         />
         <br /> <br />
         <label htmlFor="password">Re-enter Password:</label>
@@ -111,13 +112,14 @@ const Register = () => {
           type="password"
           name="password2"
           id="user_password2"
-          placeholder="Password2"
+          placeholder="Re-enter Password"
         />
         <br /> <br />
         <button type="submit" id="registerSubmitButton">
           Register
         </button>
-      </form>
+        </form>
+        </div>
     </>
   );
 };

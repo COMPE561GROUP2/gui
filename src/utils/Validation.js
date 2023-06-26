@@ -6,7 +6,7 @@ const isValidEmail = (email) => {
 }
 
 
-const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+const phoneRegex = /^\d{10}$/;
 
 const isValidPhone = (phoneNumber) => {
     phoneRegex.test(phoneNumber);
