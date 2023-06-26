@@ -3,21 +3,7 @@ import AuthContext from "../context/AuthContext";
 
 const Login = () => {
   let { loginUser } = useContext(AuthContext);
-  var userID = document.getElementByID(user_id);
-  var userPassword = document.getElementByID(user_password)
-  var userName, userEmail;
-
-for (i = 0; i < userID.length(); i++) {
-	if (userID[i] != '@')
-		userName = userID;
-	else 
-		userEmail = userID;
-}
   
-  console.log(userName);
-  console.log(userEmail);
-  console.log(userPassword);
-
   const [auth, setAuth] = useState([])
 
   const getRegisteredUsers = () => {
@@ -37,43 +23,43 @@ for (i = 0; i < userID.length(); i++) {
 
   const authUser = () => {
 
-    let userID = document.getElementByID(user_id);
-    let userPassword = document.getElementByID(user_password);
-    let userName, userEmail;
-    
+    let userID, userPassword = null, userName = null, userEmail = null;
     let i;
     let userIDnum;
     let userEmailValid, userNameValid, userPasswordValid;
+    const users = getRegisteredUsers();
 
     (e) =>
       setInput({
-        userID: e.target.username.value,
+        userID: e.target.userID.value,
         userPassword: e.target.password.value,
       });
 
 
-    for (i = 0; i < userID.length(); i++) {
-      if (userID[i] != "@") userName = userID;
-      else userEmail = userID;
+    for (i = 0; i < userID.length - 1; i++) {
+      if (userID[i] === "@") {
+        userEmail = userID;
+        break;
+      }
     }
 
-    const users = getRegisteredUsers();
-
-
-
-
+    if (userEmail === null)
+        userName = userID;
+    
     for (i = 0; i < users.length; i++){
-      if (userEmail == users[i].email){
+      if (userEmail === users[i].email){
           userEmailValid = true;
           userName = users[i].username;
           userNameValid = true;
           userIDnum = i;
+         break;
       }
-      else if (userName == users[i].username){
+      else if (userName === users[i].username){
           userNameValid = true;
           userEmail = users[i].email;
           userEmailValid = true;
           userIDnum = i;
+          break;
       }
       else {
           userEmailValid = false;
@@ -82,16 +68,20 @@ for (i = 0; i < userID.length(); i++) {
     }
 
     if (userEmailValid && userNameValid) {
-        if (userPassword == user[userIDnum].password)
+        if (userPassword === users[userIDnum].password)
             userPasswordValid = true;
         else
             userPasswordValid = false;
-        }
+    }
     else {
         userPasswordValid = false;
     }
+
+  console.log(userName);
+  console.log(userEmail);
+  console.log(userPassword);
     
-  return userPasswordValid;
+  return [userEmailValid, userNameValid, userPasswordValid];
   }
 
 
@@ -115,7 +105,7 @@ for (i = 0; i < userID.length(); i++) {
         </h2>
         <br /> <br />
         <form className="loginSection" onSubmit={authUser()}>
-          <label htmlFor="user_id"> Username or Email:</label>
+          <label htmlFor="userID"> Username or Email:</label>
           <br />
           <input
             type="text"
