@@ -1,5 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import AuthContext from "../context/AuthContext";
+import { NavLink } from "react-router-dom";
+
 import isValidEmail from "../utils/Validation";
 
 const Login = () => {
@@ -129,9 +131,10 @@ const Login = () => {
             Log In
           </button>
           <br /> <br />
-          <button type="submit" id="registerRedirectButton">
-            Register
-          </button>
+    <NavLink to="/Register">
+    <button>Register</button>
+    
+    </NavLink>
         </form>
       </div>
     </>
