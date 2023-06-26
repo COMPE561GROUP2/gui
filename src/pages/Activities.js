@@ -37,7 +37,7 @@ const Activities = () => {
         </div>
       </section>
       <section id="Activities">
-        <h2 className="text-center my-3">Activities</h2>
+        <h2 className="text-center my-3">Your Top Activities</h2>
 
         {/*Card 1*/}
 

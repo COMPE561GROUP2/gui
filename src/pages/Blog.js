@@ -58,18 +58,20 @@ const Blog = () => {
           <div className="col-md-10 col-lg-8 col-xl-7">
             {/* Post preview*/}
             <div className="post-preview">
-              <a href="post.html">
+              
+              <p className="post-meta">
+                Posted by
+                <NavLink to="/BlogServer">
                 <h2 className="post-title">
                   Man must explore, and this is exploration at its greatest
                 </h2>
                 <h3 className="post-subtitle">
                   Problems look mighty small from 150 miles up
-                </h3>
-              </a>
-
+                </h3></NavLink>
+              </p>
               <p className="post-meta">
                 Posted by
-                <NavLink to="/UserPage">Joe Smith</NavLink>
+                <NavLink to="/UserPage"> Joe Smith </NavLink>
                 on September 24, 2023
               </p>
             </div>
