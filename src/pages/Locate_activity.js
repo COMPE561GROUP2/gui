@@ -76,11 +76,7 @@ const LocatePage = () => {
                 <div class="tab-pane" id="Conditions">
                     <p class=" card-text">Brief summary here about the activity's weather</p>
                 </div>
-            </form>
-                {/* <form className="card-body tab-content" style={{height:400}}>
-                  <h5 className="card-title">Brief summary here about the activity</h5>
-                  <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                </form> */}
+                </form>
               </div>
               </div>
             </div>
