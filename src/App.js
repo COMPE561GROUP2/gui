@@ -5,6 +5,7 @@ import Help from "./pages/Help.js";
 import Login from "./pages/Login.js";
 import Blog from "./pages/Blog.js";
 import Post from "./pages/Post.js";
+import Post1 from "./pages/Post1.js";
 import Register from "./pages/Register.js";
 import Activities from "./pages/Activities.js";
 import UserPage from "./pages/UserPage.js";
@@ -52,6 +53,7 @@ class App extends React.Component {
                 <Route exact path="activities" element={<Activities />} />
                 <Route exact path="blog" element={<Blog />} />
                 <Route exact path="post" element={<Post />} />
+                <Route exact path="post1" element={<Post1 />} />
                 <Route exact path="login" element={<Login />} />
                 <Route exact path="register" element={<Register />} />
                 <Route exact path="userpage" element={<UserPage />} />

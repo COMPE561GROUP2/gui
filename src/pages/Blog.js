@@ -2,7 +2,9 @@ import { NavLink } from "react-router-dom";
 
 const Blog = () => {
   return (
-    <>
+    <> 
+    <div className="container-fluid" style={{height: 1000}}>
+      
       <meta charSet="utf-8" />
       <meta
         name="viewport"
@@ -70,7 +72,7 @@ const Blog = () => {
               </p>
               <p className="post-meta">
                 Posted by
-                <NavLink to="/UserPage"> Joe Smith </NavLink>
+               Joe Smith
                 on September 24, 2023
               </p>
             </div>
@@ -80,74 +82,27 @@ const Blog = () => {
 
             {/* Post preview*/}
             <div className="post-preview">
-              <a href="post.html">
+              
+            <NavLink to="/Post1">
                 <h2 className="post-title">
                   I believe every human has a finite number of heartbeats. I
                   don't intend to waste any of mine.
                 </h2>
-              </a>
+                </NavLink>
 
               <p className="post-meta">
                 Posted by
-                <NavLink to="/UserPage">Mary Littlelamb</NavLink>
+                Mary Littlelamb
                 on September 18, 2023
               </p>
             </div>
 
-            {/* Divider*/}
-            <hr className="my-4" />
-
-            {/* Post preview*/}
-            <div className="post-preview">
-                <NavLink to="/Post">
-                <h2 className="post-title">
-                  Science has not yet mastered prophecy
-                </h2>
-                <h3 className="post-subtitle">
-                  We predict too much for the next year and yet far too little
-                  for the next ten.
-                </h3>
-                </NavLink>
-                
-              <p className="post-meta">
-                Posted by
-                <NavLink to="/UserPage">Bill Chill</NavLink>
-                on August 24, 2023
-              </p>
-            </div>
-
-            {/* Divider*/}
-            <hr className="my-4" />
-
-            {/* Post preview*/}
-            <div className="post-preview">
-              <a href="post.html">
-                <h2 className="post-title">Failure is not an option</h2>
-                <h3 className="post-subtitle">
-                  Many say exploration is part of our destiny, but it's actually
-                  our duty to future generations.
-                </h3>
-              </a>
-              <p className="post-meta">
-                Posted by
-                <NavLink to="/UserPage">Ugur Dogan</NavLink>
-                on July 8, 2023
-              </p>
-            </div>
-
-            {/* Divider*/}
-            <hr className="my-4" />
-
-            {/* Pager*/}
-            <div className="d-flex justify-content-end mb-4">
-              <a className="btn btn-primary text-uppercase" href="#!">
-                Older Posts →
-              </a>
-            </div>
           </div>
         </div>
       </div>
+    </div>
     </>
+
   );
 };
 
