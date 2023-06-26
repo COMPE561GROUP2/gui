@@ -43,7 +43,6 @@ const Home = () => {
               <div className="card">
                 <img
                   src={images.hike1}
-                  //src = {require('../assets/hike1.jpg').default}
                   className="card-img-top"
                   alt="..."
                 />
