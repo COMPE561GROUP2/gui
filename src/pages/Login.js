@@ -3,8 +3,22 @@ import AuthContext from "../context/AuthContext";
 
 const Login = () => {
   let { loginUser } = useContext(AuthContext);
+  var userID = document.getElementByID(user_id);
+  var userPassword = document.getElementByID(user_password)
+  var userName, userEmail;
 
-  return (
+for (i = 0; i < userID.length(); i++) {
+	if (userID[i] != '@')
+		userName = userID;
+	else 
+		userEmail = userID;
+}
+  
+  console.log(userName);
+  console.log(userEmail);
+  console.log(userPassword);
+
+return (
     <>
       <title>Touch Grass - Login</title>
       <meta charSet="utf-8" />
