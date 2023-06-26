@@ -8,7 +8,7 @@ import Post from "./pages/Post.js";
 import Register from "./pages/Register.js";
 import Activities from "./pages/Activities.js";
 import UserPage from "./pages/UserPage.js";
-import Set_activity from "./pages/Set_activity";
+import Locate_activity from "./pages/Locate_activity";
 
 import Navbar from "./elements/Navbar.js";
 import Footer from "./elements/Footer.js"
@@ -55,7 +55,7 @@ class App extends React.Component {
                 <Route exact path="login" element={<Login />} />
                 <Route exact path="register" element={<Register />} />
                 <Route exact path="userpage" element={<UserPage />} />
-                <Route exact path="set_activity" element={<Set_activity />} />
+                <Route exact path="locate_activity" element={<Locate_activity />} />
 
                 <Route path="*" element={<Navigate to="home" replace />} />
               </Routes>

@@ -56,7 +56,7 @@ const Activities = () => {
                     up the bulk of the card's content.
                   </p>
                   <button style={{border: 'none'}}> 
-                    <NavLink to="/Set_activity"  className="btn btn-primary">
+                    <NavLink to="/Locate_activity"  className="btn btn-success">
                     La Jolla Scripps
                     </NavLink>
                   </button>
@@ -92,7 +92,7 @@ const Activities = () => {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <button href="#" className="btn btn-primary">
+                  <button href="#" className="btn btn-success">
                     Go somewhere
                   </button>
                   <br /> <br />
@@ -127,7 +127,7 @@ const Activities = () => {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <button href="#" className="btn btn-primary">
+                  <button href="#" className="btn btn-success">
                     Go somewhere
                   </button>
                   <br /> <br />
