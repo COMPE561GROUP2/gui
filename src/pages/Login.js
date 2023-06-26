@@ -1,8 +1,86 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import AuthContext from "../context/AuthContext";
 
 const Login = () => {
   let { loginUser } = useContext(AuthContext);
+
+  const [auth, setAuth] = useState([])
+
+  const getRegisteredUsers = () => {
+    fetch("/json_backend/users/registered_users.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then(function (response) {
+        console.log(response);
+        return response.json();
+      })
+  }
+
+  const [input, setInput] = useState([])
+
+  const authUser = () => {
+
+    let userID = document.getElementByID(user_id);
+    let userPassword = document.getElementByID(user_password);
+    let userName, userEmail;
+    
+    let i;
+    let userIDnum;
+    let userEmailValid, userNameValid, userPasswordValid;
+
+    (e) =>
+      setInput({
+        userID: e.target.username.value,
+        userPassword: e.target.password.value,
+      });
+
+
+    for (i = 0; i < userID.length(); i++) {
+      if (userID[i] != "@") userName = userID;
+      else userEmail = userID;
+    }
+
+    const users = getRegisteredUsers();
+
+
+
+
+    for (i = 0; i < users.length; i++){
+      if (userEmail == users[i].email){
+          userEmailValid = true;
+          userName = users[i].username;
+          userNameValid = true;
+          userIDnum = i;
+      }
+      else if (userName == users[i].username){
+          userNameValid = true;
+          userEmail = users[i].email;
+          userEmailValid = true;
+          userIDnum = i;
+      }
+      else {
+          userEmailValid = false;
+          userNameValid = false;
+      }
+    }
+
+    if (userEmailValid && userNameValid) {
+        if (userPassword == user[userIDnum].password)
+            userPasswordValid = true;
+        else
+            userPasswordValid = false;
+        }
+    else {
+        userPasswordValid = false;
+    }
+    
+  return userPasswordValid;
+  }
+
+
 
   return (
     <>
@@ -22,14 +100,14 @@ const Login = () => {
           Please Enter Your Login Information{" "}
         </h2>
         <br /> <br />
-        <form className="loginSection" onSubmit={loginUser}>
+        <form className="loginSection" onSubmit={authUser()}>
           <label htmlFor="user_id"> Username or Email:</label>
           <br />
           <input
             type="text"
-            name="username"
-            id="user_id"
-            placeholder="Username"
+            name="userID"
+            id="userID"
+            placeholder="UserID"
           />
           <br /> <br />
           <label htmlFor="password"> Password:</label>
@@ -37,7 +115,7 @@ const Login = () => {
           <input
             type="password"
             name="password"
-            id="user_password"
+            id="password"
             placeholder="Password"
           />
           <br /> <br />
