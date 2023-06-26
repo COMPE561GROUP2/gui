@@ -88,7 +88,7 @@ const UserPage = () => {
                       data-bs-toggle="tab"
                       href="#Fav-Locations"
                     >
-                      Posts
+                      Favorite Locations
                     </a>
                   </li>
                   <li className="nav-item">
