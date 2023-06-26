@@ -1,36 +1,32 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import AuthContext from "../context/AuthContext";
 
 const Login = () => {
   let { loginUser } = useContext(AuthContext);
-  
-  const [auth, setAuth] = useState([])
 
-  const getRegisteredUsers = () => {
-    fetch("/json_backend/users/registered_users.json", {
+  const [auth, setAuth] = useState([]);
+  const [input, setInput] = useState([]);
+
+  const getRegisteredUsers = async () => {
+    const response = await fetch("/json_backend/users/registered_users.json", {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-    })
-      .then(function (response) {
-        console.log(response);
-        return response.json();
-      });
-  }
-
-  const [input, setInput] = useState([])
+    });
+    const data = await response.json();
+    return data;
+  };
 
   const authUser = async () => {
-
-    let userID = input.userID, userPassword = input.userPassword, userName = null, userEmail = null;
+    let userID = input.userID,
+      userPassword = input.userPassword,
+      userName = null,
+      userEmail = null;
     let i;
     let userIDnum;
     let userEmailValid, userNameValid, userPasswordValid;
     const users = await getRegisteredUsers();
-
-    
-
 
     for (i = 0; i < userID.length - 1; i++) {
       if (userID[i] === "@") {
@@ -39,56 +35,52 @@ const Login = () => {
       }
     }
 
-    if (userEmail === null)
-        userName = userID;
-    
-    for (i = 0; i < users.length; i++){
-      if (userEmail === users[i].email){
-          userEmailValid = true;
-          userName = users[i].username;
-          userNameValid = true;
-          userIDnum = i;
-         break;
-      }
-      else if (userName === users[i].username){
-          userNameValid = true;
-          userEmail = users[i].email;
-          userEmailValid = true;
-          userIDnum = i;
-          break;
-      }
-      else {
-          userEmailValid = false;
-          userNameValid = false;
+    if (userEmail === null) userName = userID;
+
+    for (i = 0; i < users.length; i++) {
+      if (userEmail === users[i].email) {
+        userEmailValid = true;
+        userName = users[i].username;
+        userNameValid = true;
+        userIDnum = i;
+        break;
+      } else if (userName === users[i].username) {
+        userNameValid = true;
+        userEmail = users[i].email;
+        userEmailValid = true;
+        userIDnum = i;
+        break;
+      } else {
+        userEmailValid = false;
+        userNameValid = false;
       }
     }
 
     if (userEmailValid && userNameValid) {
-        if (userPassword === users[userIDnum].password)
-            userPasswordValid = true;
-        else
-            userPasswordValid = false;
-    }
-    else {
-        userPasswordValid = false;
+      if (userPassword === users[userIDnum].password) userPasswordValid = true;
+      else userPasswordValid = false;
+    } else {
+      userPasswordValid = false;
     }
 
-  console.log(userName);
-  console.log(userEmail);
-  console.log(userPassword);
-    
+    console.log(userName);
+    console.log(userEmail);
+    console.log(userPassword);
+
     if (!userPasswordValid) {
       alert("Password is invalid");
-    }
-    else if (!(userEmailValid && userNameValid)) {
+    } else if (!(userEmailValid && userNameValid)) {
       alert("Username or Email is invalid. Please register with us instead!");
-    }
-    else {
+    } else {
       alert("Loggin Successful!");
     }
-  }
+  };
 
-
+  useEffect(() => {
+    if (input.userID && input.userPassword) {
+      authUser();
+    }
+  }, [input]);
 
   return (
     <>
@@ -112,12 +104,13 @@ const Login = () => {
           className="loginSection"
           onSubmit={(e) => {
             e.preventDefault();
-            setInput({
-              userID: e.target.userID.value,
-              userPassword: e.target.password.value,
-            },
-            () => authUser());
-            
+            setInput(
+              {
+                userID: e.target.userID.value,
+                userPassword: e.target.password.value,
+              },
+              () => authUser()
+            );
           }}
         >
           <label htmlFor="userID"> Username or Email:</label>
