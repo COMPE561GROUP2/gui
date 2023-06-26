@@ -23,17 +23,13 @@ const Login = () => {
 
   const authUser = () => {
 
-    let userID, userPassword = "temp", userName = "temp", userEmail = "temp";
+    let userID = input.userID, userPassword = input.userPassword, userName = null, userEmail = null;
     let i;
     let userIDnum;
     let userEmailValid, userNameValid, userPasswordValid;
     const users = getRegisteredUsers();
 
-    (e) =>
-      setInput({
-        userID: e.target.userID.value,
-        userPassword: e.target.password.value,
-      });
+    
 
 
     for (i = 0; i < userID.length - 1; i++) {
@@ -104,7 +100,11 @@ const Login = () => {
           Please Enter Your Login Information{" "}
         </h2>
         <br /> <br />
-        <form className="loginSection" onSubmit={authUser()}>
+        <form className="loginSection" onSubmit={(e) =>
+      setInput({
+        userID: e.target.userID.value,
+        userPassword: e.target.password.value,
+      }) & authUser()}>
           <label htmlFor="userID"> Username or Email:</label>
           <br />
           <input
