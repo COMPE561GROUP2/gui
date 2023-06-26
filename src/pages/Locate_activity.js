@@ -46,7 +46,7 @@ const LocatePage = () => {
         <section>
             <div className="container-fluid rounded pt-5">
               <div className="card bg-dark text-white w-50 mx-auto">
-              <img src={images.surf1} class="card-img-rounded-0" alt="..." style={{height:400}}/>
+              <img src={images.surf1} class="card-img-rounded-0" alt="..." style={{height:380}}/>
               <div className="card-img-overlay">
                   <h1 className="card-title">{activity.name}'s activity</h1>
                   <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -56,20 +56,31 @@ const LocatePage = () => {
               <div className="card-header w-100 mx-auto">
                 <ul className="nav nav-tabs card-header-tabs">
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="true" href="#">Description</a>
+                    <a className="nav-link active" aria-current="true" data-bs-toggle="tab" href="#Description">Description</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Waypoints</a>
+                    <a className="nav-link" data-bs-toggle="tab" href="#Waypoint">Waypoints</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#" tabindex="-1" aria-disabled="true">Conditions</a>
+                    <a className="nav-link" data-bs-toggle="tab" href="#Conditions">Conditions</a>
                   </li>
                 </ul>
                 </div>
-                <div className="card-body" style={{height:400}}>
-                  <h5 className="card-title">Special title treatment</h5>
-                  <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <form class="card-body tab-content" style={{height:400}}>
+                <div class="tab-pane active" id="Description">
+                    <p class="card-text">Brief summary here about the activity</p>
                 </div>
+                <div class="tab-pane" id="Waypoint">
+                    <p class=" card-text">Brief summary here about the activity's waypoint or map informations</p>
+                </div>
+                <div class="tab-pane" id="Conditions">
+                    <p class=" card-text">Brief summary here about the activity's weather</p>
+                </div>
+            </form>
+                {/* <form className="card-body tab-content" style={{height:400}}>
+                  <h5 className="card-title">Brief summary here about the activity</h5>
+                  <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </form> */}
               </div>
               </div>
             </div>
