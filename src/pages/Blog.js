@@ -92,7 +92,7 @@ const Blog = () => {
 
               <p className="post-meta">
                 Posted by
-                Mary Littlelamb
+                Joe Smith
                 on September 18, 2023
               </p>
             </div>
