@@ -60,8 +60,7 @@ const Blog = () => {
             <div className="post-preview">
               
               <p className="post-meta">
-                Posted by
-                <NavLink to="/BlogServer">
+                <NavLink to="/Post">
                 <h2 className="post-title">
                   Man must explore, and this is exploration at its greatest
                 </h2>
@@ -100,7 +99,7 @@ const Blog = () => {
 
             {/* Post preview*/}
             <div className="post-preview">
-              <a href="post.html">
+                <NavLink to="/Post">
                 <h2 className="post-title">
                   Science has not yet mastered prophecy
                 </h2>
@@ -108,8 +107,8 @@ const Blog = () => {
                   We predict too much for the next year and yet far too little
                   for the next ten.
                 </h3>
-              </a>
-
+                </NavLink>
+                
               <p className="post-meta">
                 Posted by
                 <NavLink to="/UserPage">Bill Chill</NavLink>
