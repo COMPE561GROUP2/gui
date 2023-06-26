@@ -92,8 +92,10 @@ const Activities = () => {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <button href="#" className="btn btn-success">
-                    Go somewhere
+                  <button style={{border: 'none'}}> 
+                    <NavLink to="/Locate_activity"  className="btn btn-success">
+                    Go Somewhere
+                    </NavLink>
                   </button>
                   <br /> <br />
                   <iframe
@@ -127,8 +129,10 @@ const Activities = () => {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <button href="#" className="btn btn-success">
-                    Go somewhere
+                  <button style={{border: 'none'}}> 
+                    <NavLink to="/Locate_activity"  className="btn btn-success">
+                    Go Somewhere
+                    </NavLink>
                   </button>
                   <br /> <br />
                   <iframe
