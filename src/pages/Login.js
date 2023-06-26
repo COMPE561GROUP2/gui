@@ -108,23 +108,21 @@ const Login = () => {
           Please Enter Your Login Information{" "}
         </h2>
         <br /> <br />
-        <form className="loginSection" onSubmit={(e) =>
-      setInput(
-        {
-        userID: e.target.userID.value,
-        userPassword: e.target.password.value,
-        },
-       () => authUser()
-       )
-       }>
+        <form
+          className="loginSection"
+          onSubmit={(e) => {
+            e.preventDefault();
+            setInput({
+              userID: e.target.userID.value,
+              userPassword: e.target.password.value,
+            },
+            () => authUser());
+            
+          }}
+        >
           <label htmlFor="userID"> Username or Email:</label>
           <br />
-          <input
-            type="text"
-            name="userID"
-            id="userID"
-            placeholder="UserID"
-          />
+          <input type="text" name="userID" id="userID" placeholder="UserID" />
           <br /> <br />
           <label htmlFor="password"> Password:</label>
           <br />
