@@ -46,7 +46,10 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("authTokens", JSON.stringify(data));
       navigate("/home");
     } else {
-      alert("Network Error: " + response.status);
+        if (response.status === 401)
+          alert("Incorrect Username and/or Password");
+        else
+          alert("Network Error: " + response.status);
     }
   };
 

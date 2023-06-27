@@ -1,29 +1,17 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useParams } from "react";
 import axios from "axios";
 
 import AuthContext from "../context/AuthContext";
 
 import images from "../assets/assets.js";
 
-const UserPage = () => {
-  let { user } = useContext(AuthContext);
+const UserProfile = () => {
+  let { profile_owner } = useParams();
 
-  const [profile, setProfile] = useState({
-    username: "joe_smith",
-    email: "joesmith@aol.com",
-    firstName: "Joe",
-    lastName: "Smith",
-    age: 30,
-    address: {
-      street: "123 Main Street",
-      city: "New York",
-      state: "NY",
-      postalCode: "10001",
-    },
-  });
+  const [profile, setProfile] = useState([]);
 
   const getProfile = () => {
-    fetch("/json_backend/profiles/joe_smith_profile.json", {
+    fetch("http://127.0.0.1:8000/", {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
@@ -138,4 +126,4 @@ const UserPage = () => {
   );
 };
 
-export default UserPage;
+export default UserProfile;

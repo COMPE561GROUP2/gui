@@ -71,7 +71,7 @@ const Blog = () => {
                 </div>
                 <p className="post-meta">
                   Posted by
-                  <NavLink to="/UserPage">Joe Smith</NavLink>
+                  <NavLink to="/user-profile">Joe Smith</NavLink>
                   on September 24, 2023
                 </p>
               </div>
@@ -89,7 +89,8 @@ const Blog = () => {
                 </NavLink>
 
                 <p className="post-meta">
-                  Posted by <NavLink to="/UserPage">Joe Smith</NavLink> on September 18, 2023
+                  Posted by <NavLink to="/user-profile">Joe Smith</NavLink> on
+                  September 18, 2023
                 </p>
               </div>
             </div>

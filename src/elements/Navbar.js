@@ -2,6 +2,7 @@ import { NavLink, Link, useLocation } from "react-router-dom";
 import { useEffect, useContext } from "react";
 import AuthContext from "../context/AuthContext";
 import logo from "../assets/OutdoorLogo.png";
+import Private from "../utils/Private";
 
 const Navbar = () => {
   const location = useLocation();
@@ -77,6 +78,22 @@ const Navbar = () => {
                   Blog
                 </NavLink>
               </li>
+
+              <Private>
+                <li className="nav-item">
+                  <NavLink
+                    id="about-btn"
+                    to="/user-profile"
+                    onClick={clickNav}
+                    className={({ isActive }) =>
+                      isActive ? "nav-link active" : "nav-link"
+                    }
+                  >
+                    Profile
+                  </NavLink>
+                </li>
+              </Private>
+
               <li className="nav-item">
                 <NavLink
                   id="about-btn"

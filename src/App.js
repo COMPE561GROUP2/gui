@@ -8,7 +8,7 @@ import Post from "./pages/Post.js";
 import Post1 from "./pages/Post1.js";
 import Register from "./pages/Register.js";
 import Activities from "./pages/Activities.js";
-import UserPage from "./pages/UserPage.js";
+import UserProfile from "./pages/UserProfile.js";
 import Location from "./pages/Location";
 
 import Navbar from "./elements/Navbar.js";
@@ -42,8 +42,9 @@ class App extends React.Component {
                 <Route exact path="post1" element={<Post1 />} />
                 <Route exact path="login" element={<Login />} />
                 <Route exact path="register" element={<Register />} />
-                <Route exact path="userpage" element={<UserPage />} />
                 <Route exact path="location" element={<Location />} />
+
+                <Route exact path="user-profile/:username" element={<UserProfile />} />
 
                 <Route path="*" element={<Navigate to="home" replace />} />
               </Routes>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { isValidEmail, isValidPhone, isValidPassword, isValidUsername } from "../utils/Validation";
+import { Navigate } from 'react-router-dom';
 
 const Register = () => {
 
@@ -7,37 +8,30 @@ const Register = () => {
 
   const registerUser = async () => {
 
-    // validate user inputs
-  
-    if ( input.password1 !== input.password2 ) {
-      alert("Please enter the same password in both fields")
-      return
-    }
-    if ( !isValidEmail(input.email) ) {
-      alert("Please enter a valid email");
-      return;
-    }
-    if (!isValidPhone(input.phone)) {
-      alert("Please enter a valid phone number");
-      return;
-    }
-    if (!isValidUsername(input.phone)) {
-      alert("Username must contain only alphanumeric symbols and be between 3-20 characters");
-      return;
-    }
-    if (
-      !isValidPassword(input.password1) ||
-      !isValidPassword(input.password2)
-    ) {
-      alert("Passwords must have:\nAt least one uppercase letter\nAt least one lowercase letter\nAt least one digit\nAt least one special character from the set [@ $ ! % * ? &]\nMinimum length of 8 characters");
-      return;
+    let response = await fetch("http://127.0.0.1:8000/users/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: input.username,
+        email: input.email,
+        password: input.password,
+      }),
+    });
+
+    let data = await response.json()
+
+    if (response.status === 201) {
+      alert("Congratulations you are now registered!");
+    } else {
+      alert(response.status + ": " + JSON.stringify(data, null, 4));
     }
 
-    alert("Account Created!")
   }
 
   useEffect(() => {
-    if (input.username && input.password1 && input.password2 && input.email && input.phone) {
+    if (input.username && input.password && input.email) {
       registerUser();
     }
     // else
@@ -63,16 +57,13 @@ const Register = () => {
           className="loginSection"
           onSubmit={(e) => {
             e.preventDefault();
-            setInput(
-              {
-                username: e.target.username.value,
-                email: e.target.email.value,
-                phone: e.target.email.value,
-                password1: e.target.password1.value,
-                password2: e.target.password2.value,
-              },
-              () => registerUser()
-            );
+            setInput({
+              username: e.target.username.value,
+              email: e.target.email.value,
+              // phone: e.target.phone.value,
+              password: e.target.password.value,
+              // password2: e.target.password2.value,
+            });
           }}
         >
           <label htmlFor="usernameText"> Username:</label>
@@ -88,7 +79,7 @@ const Register = () => {
           <br />
           <input type="text" name="email" id="userEmail" placeholder="Email" />
           <br /> <br />
-          <label htmlFor="userPhoneNumber"> Phone Number:</label>
+          {/* <label htmlFor="userPhoneNumber"> Phone Number:</label>
           <br />
           <input
             type="text"
@@ -96,16 +87,17 @@ const Register = () => {
             id="userPhoneNumber"
             placeholder="Phone Number"
           />
-          <br /> <br />
+          <br /> <br /> */}
           <label htmlFor="password"> Password:</label>
           <br />
           <input
             type="password"
-            name="password1"
-            id="user_password1"
+            name="password"
+            id="user_password"
             placeholder="Password"
+            autoComplete='on'
           />
-          <br /> <br />
+          {/* <br /> <br />
           <label htmlFor="password">Re-enter Password:</label>
           <br />
           <input
@@ -113,17 +105,7 @@ const Register = () => {
             name="password2"
             id="user_password2"
             placeholder="Re-enter Password"
-          />
-          <br /> <br />
-          <strong>Password Requirements:</strong> <br />
-          <p>At least one uppercase letter</p> <br />
-          <p>At least one lowercase letter</p> <br />
-          <p>At least one digit</p> <br />
-          <p>
-            At least one special character from the set [@ $ ! % * ? &]
-          </p>{" "}
-          <br />
-          <p>Minimum length of 8 characters</p>
+          /> */}
           <br /> <br />
           <button type="submit" id="registerSubmitButton">
             Register
