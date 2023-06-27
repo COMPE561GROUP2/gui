@@ -15,7 +15,7 @@ const Home = () => {
       />
 
       <section>
-        <div className="container">
+        <div className="container-fluid">
           <h1 style={{ textAlign: "center", paddingTop: "5%" }}>
             {" "}
             Find Your Outdoors

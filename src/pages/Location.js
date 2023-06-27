@@ -5,12 +5,12 @@ import AuthContext from "../context/AuthContext";
 
 import images from "../assets/assets.js";
 
-const LocatePage = () => {
+const Location = () => {
   let { activities } = useContext(AuthContext);
 
-  const [activity, setActivity] = useState([]);
+  const [location, setLocation] = useState([]);
 
-  const getActivity = () => {
+  const getLocation = () => {
     fetch("/json_backend/activities/La_Jolla_Beach.json", {
       headers: {
         "Content-Type": "application/json",
@@ -21,14 +21,14 @@ const LocatePage = () => {
         console.log(response);
         return response.json();
       })
-      .then(function (activity_json) {
-        console.log(activity_json);
-        setActivity(activity_json);
+      .then(function (location_json) {
+        console.log(location_json);
+        setLocation(location_json);
       });
   };
 
   useEffect(() => {
-    getActivity();
+    getLocation();
   }, []);
 
   return (
@@ -46,9 +46,9 @@ const LocatePage = () => {
         <section>
             <div className="container-fluid rounded pt-5">
               <div className="card bg-dark text-white w-50 mx-auto">
-              <iclassNamemg src={images.surf1} class="card-img-rounded-0" alt="..." style={{height:380}}/>
+              <img src={images.surf1} className="card-img-rounded-0" alt="..." style={{height:380}}/>
               <div className="card-img-overlay">
-                  <h1 className="card-title">{activity.name}'s activity</h1>
+                  <h1 className="card-title">{location.name}'s location</h1>
                   <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               </div>
 
@@ -68,17 +68,17 @@ const LocatePage = () => {
                 </div>
                 <form class="card-body tab-content" style={{height:400}}>
                 <div class="tab-pane active" id="Description">
-                    <p class="card-text">Brief summary here about the activity</p>
+                    <p class="card-text">Brief summary here about the location</p>
                 </div>
                 <div class="tab-pane" id="Waypoint">
-                    <p class=" card-text">Brief summary here about the activity's waypoint or map informations</p>
+                    <p class=" card-text">Brief summary here about the location's waypoint or map informations</p>
                 </div>
                 <div class="tab-pane" id="Conditions">
-                    <p class=" card-text">Brief summary here about the activity's weather</p>
+                    <p class=" card-text">Brief summary here about the location's weather</p>
                 </div>
             </form>
                 {/* <form className="card-body tab-content" style={{height:400}}>
-                  <h5 className="card-title">Brief summary here about the activity</h5>
+                  <h5 className="card-title">Brief summary here about the location</h5>
                   <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 </form> */}
               </div>
@@ -89,4 +89,4 @@ const LocatePage = () => {
   );
 };
 
-export default LocatePage;
+export default Location;

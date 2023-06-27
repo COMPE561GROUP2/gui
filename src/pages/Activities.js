@@ -93,7 +93,7 @@ const Activities = () => {
                     up the bulk of the card's content.
                   </p>
                   <button style={{border: 'none'}}> 
-                    <NavLink to="/Locate_activity"  className="btn btn-success">
+                    <NavLink to="/Location"  className="btn btn-success">
                     Go Somewhere
                     </NavLink>
                   </button>
@@ -130,7 +130,7 @@ const Activities = () => {
                     up the bulk of the card's content.
                   </p>
                   <button style={{border: 'none'}}> 
-                    <NavLink to="/Locate_activity"  className="btn btn-success">
+                    <NavLink to="/Location"  className="btn btn-success">
                     Go Somewhere
                     </NavLink>
                   </button>
