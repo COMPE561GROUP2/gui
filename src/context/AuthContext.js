@@ -3,19 +3,19 @@ import jwt_decode from "jwt-decode";
 import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
-
 export default AuthContext;
 
 export const AuthProvider = ({ children }) => {
+
   let [authTokens, setAuthTokens] = useState(() =>
-    localStorage.getItem("AuthTokens")
-      ? JSON.parse(localStorage.getItem("AuthTokens"))
+    localStorage.getItem("authTokens")
+      ? JSON.parse(localStorage.getItem("authTokens"))
       : null
   );
 
   let [user, setUser] = useState(() =>
-    localStorage.getItem("AuthTokens")
-      ? jwt_decode(localStorage.getItem("AuthTokens"))
+    localStorage.getItem("authTokens")
+      ? jwt_decode(localStorage.getItem("authTokens"))
       : null
   );
 
@@ -23,14 +23,14 @@ export const AuthProvider = ({ children }) => {
 
   let loginUser = async (e) => {
     e.preventDefault();
-    let response = fetch("http://127.0.0.1:8000/api/token/", {
+    let response = await fetch("http://127.0.0.1:8000/api/token/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        username: e.target.username.value,
-        password: e.target.password.value,
+        'username': e.target.username.value,
+        'password': e.target.password.value,
       }),
     });
     let data = await response.json();
@@ -49,11 +49,13 @@ export const AuthProvider = ({ children }) => {
   };
 
   let contextData = {
-    user: user,
-    loginUser: loginUser,
+    'user': user,
+    'loginUser': loginUser,
   };
 
   return (
-    <AuthContext.Provider value={contextData}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={contextData}>
+      {children}
+    </AuthContext.Provider>
   );
 };
