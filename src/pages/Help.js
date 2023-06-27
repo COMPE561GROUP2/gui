@@ -1,3 +1,5 @@
+import Private from '../utils/Private.js'
+
 const Help = () => {
   return (
     <>
@@ -11,10 +13,15 @@ const Help = () => {
         crossOrigin="anonymous"
       />
 
-      <h1 className="row h-100 justify-content-center align-items-center">
-        {" "}
+
+      <h1 
+        className="row h-100 justify-content-center align-items-center"
+        style={{'margin': 30}}
+      >
         Help &amp; FAQ
       </h1>
+
+
       <div className="body">
         <div className="accordion" id="accordionExample">
           <div className="accordion-item">
@@ -133,54 +140,55 @@ const Help = () => {
                     tickle your skin.
                   </li>
                 </ol>
-
-                Remember to be mindful of any allergies or potential hazards
-                in the grassy area, such as insects or sharp objects. It's
-                always a good idea to choose a safe and clean location for
-                your grass-touching experience.
-                
+                Remember to be mindful of any allergies or potential hazards in
+                the grassy area, such as insects or sharp objects. It's always a
+                good idea to choose a safe and clean location for your
+                grass-touching experience.
               </div>
             </div>
           </div>
         </div>
-        <div
-          className="center"
-          style={{ backgroundColor: "rgb(207, 190, 163)" }}
-        >
-          <h1 className="center">
-            Got Another Question?
-            <br />
-          </h1>
-          <h3>Submit Here!</h3>
-          <form>
-            <label htmlFor="name"> Name : </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              defaultValue="Your Name Here"
-            />
-            <br />
-            <label htmlFor="email"> Email : </label>
-            <input
-              type="text"
-              name="email"
-              id="email"
-              defaultValue="Your Email Here"
-            />
-            <br />
-            <textarea
-              name="message"
-              rows={10}
-              cols={30}
-              defaultValue={" What would you like to say? "}
-            />
-            <br /> <br />
-          </form>
-          <form>
-            <input type="submit" />
-          </form>
-        </div>
+
+        <Private>
+          <div
+            className="center"
+            style={{ backgroundColor: "rgb(207, 190, 163)" }}
+          >
+            <h1 className="center">
+              Got Another Question?
+              <br />
+            </h1>
+            <h3>Submit Here!</h3>
+            <form>
+              <label htmlFor="name"> Name : </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                defaultValue="Your Name Here"
+              />
+              <br />
+              <label htmlFor="email"> Email : </label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                defaultValue="Your Email Here"
+              />
+              <br />
+              <textarea
+                name="message"
+                rows={10}
+                cols={30}
+                defaultValue={" What would you like to say? "}
+              />
+              <br /> <br />
+            </form>
+            <form>
+              <input type="submit" />
+            </form>
+          </div>
+        </Private>
       </div>
     </>
   );

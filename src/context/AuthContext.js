@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import jwt_decode from "jwt-decode";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 const AuthContext = createContext();
 export default AuthContext;
@@ -56,29 +57,33 @@ export const AuthProvider = ({ children }) => {
     navigate("/login");
   };
 
-  let updateToken = async () => {
-    let response = await fetch("http://127.0.0.1:8000/api/token/refresh/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ refresh: authTokens?.refresh }),
-    });
+  let updateToken = async ()=> {
 
-    let data = await response.json();
 
-    if (response.status === 200) {
-      setAuthTokens(data);
-      setUser(jwt_decode(data.access));
-      localStorage.setItem("authTokens", JSON.stringify(data));
-    } else {
-      logoutUser();
+        let response = await fetch('http://127.0.0.1:8000/api/token/refresh/', {
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+
+            body: JSON.stringify({'refresh':authTokens?.refresh})
+            
+        })
+        
+        let data = await response.json()
+        
+        if (response.status === 200){
+            setAuthTokens(data)
+            setUser(jwt_decode(data.access))
+            localStorage.setItem('authTokens', JSON.stringify(data))
+        }else{
+            logoutUser()
+        }
+
+        if(loading){
+            setLoading(false)
+        }
     }
-
-    if (loading) {
-      setLoading(false);
-    }
-  };
 
   let contextData = {
     user: user,
@@ -92,7 +97,7 @@ export const AuthProvider = ({ children }) => {
       updateToken()
     }
 
-    let fourMinutes = 1000 * 60 * 4
+    let fourMinutes = 1000 * 60 * 4;
 
     let interval = setInterval( () => {
       if(authTokens){

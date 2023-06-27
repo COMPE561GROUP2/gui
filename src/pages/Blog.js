@@ -59,7 +59,7 @@ const Blog = () => {
             <div className="col-md-10 col-lg-8 col-xl-7">
               {/* Post preview*/}
               <div className="post-preview">
-                <p className="post-meta">
+                <div className="post-meta">
                   <NavLink to="/Post">
                     <h2 className="post-title">
                       Man must explore, and this is exploration at its greatest
@@ -68,7 +68,7 @@ const Blog = () => {
                       Problems look mighty small from 150 miles up
                     </h3>
                   </NavLink>
-                </p>
+                </div>
                 <p className="post-meta">
                   Posted by
                   <NavLink to="/UserPage">Joe Smith</NavLink>

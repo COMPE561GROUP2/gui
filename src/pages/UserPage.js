@@ -60,7 +60,7 @@ const UserPage = () => {
           <div className="card bg-dark text-white w-50 mx-auto">
             <img
               src={images.surf1}
-              class="card-img-rounded-0"
+              className="card-img-rounded-0"
               alt="..."
               style={{ height: 380 }}
             />
@@ -102,14 +102,14 @@ const UserPage = () => {
                   </li>
                 </ul>
               </div>
-              <form class="card-body tab-content" style={{ height: 400 }}>
-                <div class="tab-pane active" id="Bio">
-                  <p class="card-text">
+              <form className="card-body tab-content" style={{ height: 400 }}>
+                <div className="tab-pane active" id="Bio">
+                  <p className="card-text">
                     Location: {profile.address.city}, {profile.address.state}
                   </p>
                 </div>
-                <div class="tab-pane" id="Fav-Locations">
-                  <p class=" card-text">
+                <div className="tab-pane" id="Fav-Locations">
+                  <p className=" card-text">
                     <iframe
                       title="Map"
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429296.0065733395!2d-116.87039736647274!3d32.795572164421465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dbec2a1af657a5%3A0x65f0819e736d55d8!2sCleveland%20National%20Forest!5e0!3m2!1sen!2sus!4v1685648283501!5m2!1sen!2sus"
@@ -122,10 +122,8 @@ const UserPage = () => {
                     />
                   </p>
                 </div>
-                <div class="tab-pane" id="Friends">
-                  <p class=" card-text">
-                    Jane Doe
-                  </p>
+                <div className="tab-pane" id="Friends">
+                  <p className=" card-text">Jane Doe</p>
                 </div>
               </form>
               {/* <form className="card-body tab-content" style={{height:400}}>

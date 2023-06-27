@@ -23,10 +23,7 @@ const Login = () => {
           Please Enter Your Login Information{" "}
         </h2>
         <br /> <br />
-        <form
-          className="loginSection"
-          onSubmit={loginUser}
-        >
+        <form className="loginSection" onSubmit={loginUser}>
           <label htmlFor="userID"> Username or Email:</label>
           <br />
           <input type="text" name="userID" id="userID" placeholder="UserID" />
@@ -38,16 +35,16 @@ const Login = () => {
             name="password"
             id="password"
             placeholder="Password"
+            autoComplete="on"
           />
           <br /> <br />
           <button type="submit" id="loginSubmitButton">
             Log In
           </button>
           <br /> <br />
-    <NavLink to="/Register">
-    <button>Register</button>
-    
-    </NavLink>
+          <NavLink to="/Register">
+            <button>Register</button>
+          </NavLink>
         </form>
       </div>
     </>

@@ -24,20 +24,6 @@ import PrivateRoute from "./utils/PrivateRoute";
 import { AuthProvider } from "./context/AuthContext";
 
 class App extends React.Component {
-  state = { details: [] };
-
-  componentDidMount() {
-    let data;
-    axios
-      .get("http://localhost:8000")
-      .then((res) => {
-        data = res.data;
-        this.setState({
-          details: data,
-        });
-      })
-      .catch((err) => {});
-  }
 
   render() {
     return (

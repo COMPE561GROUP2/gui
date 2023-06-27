@@ -2,6 +2,9 @@ import images from "../assets/assets.js";
 import { NavLink } from "react-router-dom";
 
 const Activities = () => {
+
+
+
   return (
     <>
       <title>Touch Grass - Activities</title>
