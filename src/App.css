@@ -65,7 +65,9 @@
   color: green;
 }
 
-
+.flex {
+  display: flex;
+}
 
 .loginTextHeader {
   text-align: center;

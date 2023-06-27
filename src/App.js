@@ -9,7 +9,7 @@ import Post1 from "./pages/Post1.js";
 import Register from "./pages/Register.js";
 import Activities from "./pages/Activities.js";
 import UserPage from "./pages/UserPage.js";
-import Locate_activity from "./pages/Locate_activity";
+import Location from "./pages/Location";
 
 import Navbar from "./elements/Navbar.js";
 import Footer from "./elements/Footer.js"
@@ -57,7 +57,7 @@ class App extends React.Component {
                 <Route exact path="login" element={<Login />} />
                 <Route exact path="register" element={<Register />} />
                 <Route exact path="userpage" element={<UserPage />} />
-                <Route exact path="locate_activity" element={<Locate_activity />} />
+                <Route exact path="location" element={<Location />} />
 
                 <Route path="*" element={<Navigate to="home" replace />} />
               </Routes>
