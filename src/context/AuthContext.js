@@ -6,7 +6,6 @@ const AuthContext = createContext();
 export default AuthContext;
 
 export const AuthProvider = ({ children }) => {
-
   let [authTokens, setAuthTokens] = useState(() =>
     localStorage.getItem("authTokens")
       ? JSON.parse(localStorage.getItem("authTokens"))
@@ -19,6 +18,8 @@ export const AuthProvider = ({ children }) => {
       : null
   );
 
+  let [loading, setLoading] = useState(true);
+
   const navigate = useNavigate();
 
   let loginUser = async (e) => {
@@ -29,8 +30,8 @@ export const AuthProvider = ({ children }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        'username': e.target.username.value,
-        'password': e.target.password.value,
+        username: e.target.userID.value,
+        password: e.target.password.value,
       }),
     });
     let data = await response.json();
@@ -44,18 +45,65 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("authTokens", JSON.stringify(data));
       navigate("/home");
     } else {
-      alert("error!");
+      alert("Network Error: " + response.status);
+    }
+  };
+
+  let logoutUser = () => {
+    setAuthTokens(null);
+    setUser(null);
+    localStorage.removeItem("authTokens");
+    navigate("/login");
+  };
+
+  let updateToken = async () => {
+    let response = await fetch("http://127.0.0.1:8000/api/token/refresh/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ refresh: authTokens?.refresh }),
+    });
+
+    let data = await response.json();
+
+    if (response.status === 200) {
+      setAuthTokens(data);
+      setUser(jwt_decode(data.access));
+      localStorage.setItem("authTokens", JSON.stringify(data));
+    } else {
+      logoutUser();
+    }
+
+    if (loading) {
+      setLoading(false);
     }
   };
 
   let contextData = {
-    'user': user,
-    'loginUser': loginUser,
+    user: user,
+    authTokens: authTokens,
+    loginUser: loginUser,
+    logoutUser: logoutUser
   };
 
+  useEffect( () => {
+    if(loading){
+      updateToken()
+    }
+
+    let fourMinutes = 1000 * 60 * 4
+
+    let interval = setInterval( () => {
+      if(authTokens){
+        updateToken()
+      }
+    }, fourMinutes)
+    return () => clearInterval(interval)
+
+  }, [authTokens, loading])
+
   return (
-    <AuthContext.Provider value={contextData}>
-      {children}
-    </AuthContext.Provider>
+    <AuthContext.Provider value={contextData}>{children}</AuthContext.Provider>
   );
 };

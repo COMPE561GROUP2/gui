@@ -1,89 +1,9 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext } from "react";
 import AuthContext from "../context/AuthContext";
 import { NavLink } from "react-router-dom";
 
-import { isValidEmail } from "../utils/Validation";
-
 const Login = () => {
   let { loginUser } = useContext(AuthContext);
-
-  const [input, setInput] = useState([]);
-
-  const getRegisteredUsers = async () => {
-    const response = await fetch("/json_backend/users/registered_users.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    });
-    const data = await response.json();
-    return data;
-  };
-
-  const authUser = async () => {
-    let userID = input.userID,
-      userPassword = input.userPassword,
-      userName = null,
-      userEmail = null;
-    let i;
-    let userIDnum;
-    let userEmailValid, userNameValid, userPasswordValid;
-    const users = await getRegisteredUsers();
-
-    if(isValidEmail(userID))
-      userEmail = userID
-    else
-      userName = userID
-
-    if (userEmail === null) userName = userID;
-
-    for (i = 0; i < users.length; i++) {
-      if (userEmail === users[i].email) {
-        userEmailValid = true;
-        userName = users[i].username;
-        userNameValid = true;
-        userIDnum = i;
-        break;
-      } else if (userName === users[i].username) {
-        userNameValid = true;
-        userEmail = users[i].email;
-        userEmailValid = true;
-        userIDnum = i;
-        break;
-      } else {
-        userEmailValid = false;
-        userNameValid = false;
-      }
-    }
-
-    if (userEmailValid && userNameValid) {
-      if (userPassword === users[userIDnum].password) userPasswordValid = true;
-      else userPasswordValid = false;
-    } else {
-      userPasswordValid = false;
-    }
-
-    console.log(userName);
-    console.log(userEmail);
-    console.log(userPassword);
-
-    if (!userPasswordValid) {
-      alert("Password is invalid");
-    } else if (!(userEmailValid && userNameValid)) {
-      alert("Username or Email is invalid. Please register with us instead!");
-    } else {
-      alert("Login Successful!");
-    }
-
-
-    
-  };
-
-  useEffect(() => {
-    if (input.userID && input.userPassword) {
-      authUser();
-    }
-  }, [input]);
 
   return (
     <>
@@ -105,16 +25,7 @@ const Login = () => {
         <br /> <br />
         <form
           className="loginSection"
-          onSubmit={(e) => {
-            e.preventDefault();
-            setInput(
-              {
-                userID: e.target.userID.value,
-                userPassword: e.target.password.value,
-              },
-              () => authUser()
-            );
-          }}
+          onSubmit={loginUser}
         >
           <label htmlFor="userID"> Username or Email:</label>
           <br />

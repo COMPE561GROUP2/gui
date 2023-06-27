@@ -10,7 +10,7 @@ const Navbar = () => {
     window.scrollTo(0, 0);
   };
 
-  let { user } = useContext(AuthContext);
+  let { user, logoutUser } = useContext(AuthContext);
 
   return (
     <>
@@ -100,7 +100,8 @@ const Navbar = () => {
               {user ? (
                 <NavLink
                   to="/home"
-                  style={{ textDecoration: "none", color: "green" }}
+                  onClick={logoutUser}
+                  style={{ textDecoration: "none", color: "black" }}
                 >
                   Log Out
                 </NavLink>
