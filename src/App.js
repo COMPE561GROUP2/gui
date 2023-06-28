@@ -53,7 +53,7 @@ class App extends React.Component {
                   element={<UserProfile />}
                 />
 
-                <Route path="*" element={<Navigate to="home" replace />} />
+                <Route path="*" element={<NotFound/>} />
               </Routes>
             </div>
 

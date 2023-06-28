@@ -9,14 +9,7 @@ import images from "../assets/assets.js";
 const UserProfile = () => {
   let { profile_owner } = useParams();
 
-  const [profile, setProfile] = useState(
-    {
-      user:
-      {
-        'first_name': 'todd'
-      }
-    }
-  );
+  const [profile, setProfile] = useState([]);
 
   const getProfile = () => {
 
@@ -25,12 +18,15 @@ const UserProfile = () => {
       console.log(response)
       setProfile(response.data)
     })
+    .catch(error => {
+      console.error('Error', error.message)
+    })
 
   };
 
   useEffect(() => {
     getProfile();
-  }, []);
+  }, [profile]);
 
   return (
     <>
@@ -53,10 +49,14 @@ const UserProfile = () => {
               alt="..."
               style={{ height: 380 }}
             />
+
             <div className="card-img-overlay">
-              <h1 className="card-title">
-                {profile.user.first_name}'s Profile
-              </h1>
+              {profile.username ? (
+                <h1 className="card-title">{profile.username}'s Profile</h1>
+              ) : (
+                <h1 className="card-title">Profile</h1>
+              )}
+
               <p className="card-text"></p>
             </div>
 
@@ -93,12 +93,16 @@ const UserProfile = () => {
                   </li>
                 </ul>
               </div>
+
               <form className="card-body tab-content" style={{ height: 400 }}>
                 <div className="tab-pane active" id="Bio">
-                  <p className="card-text">
-                    Lorem Ipsum
-                  </p>
+                  {profile.bio ? (
+                    <p className="card-text">{profile.bio}</p>
+                  ) : (
+                    <p className="card-text">This user has not written a bio</p>
+                  )}
                 </div>
+
                 <div className="tab-pane" id="Fav-Locations">
                   <p className=" card-text">
                     <iframe

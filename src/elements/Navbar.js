@@ -83,7 +83,7 @@ const Navbar = () => {
                 <li className="nav-item">
                   <NavLink
                     id="about-btn"
-                    to="/user-profile"
+                    to={"/user-profile/"+user?.username}
                     onClick={clickNav}
                     className={({ isActive }) =>
                       isActive ? "nav-link active" : "nav-link"

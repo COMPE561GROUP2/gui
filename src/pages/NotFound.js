@@ -3,12 +3,12 @@
 const NotFound = () => {
 
     return (
-        <>
-            <h1 style={{margin: 50}}>
-                404: Page Not Found
-            </h1>
-        </>
-    )
+      <>
+        <div>
+          <h1 style={{ margin: 50, textAlign: 'center' }}>404: Page Not Found</h1>
+        </div>
+      </>
+    );
 }
 
 export default NotFound
