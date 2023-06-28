@@ -96,9 +96,9 @@ export const AuthProvider = ({ children }) => {
   };
 
   useEffect( () => {
-    if(loading){
-      updateToken()
-    }
+    // if (loading) {
+    //   updateToken();
+    // }
 
     let fourMinutes = 1000 * 60 * 4;
 
@@ -112,6 +112,8 @@ export const AuthProvider = ({ children }) => {
   }, [authTokens, loading])
 
   return (
-    <AuthContext.Provider value={contextData}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={contextData}>
+      {children}
+    </AuthContext.Provider>
   );
 };

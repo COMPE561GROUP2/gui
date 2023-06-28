@@ -66,15 +66,15 @@ const Location = () => {
                   </li>
                 </ul>
                 </div>
-                <form class="card-body tab-content" style={{height:400}}>
-                <div class="tab-pane active" id="Description">
-                    <p class="card-text">Brief summary here about the location</p>
+                <form className="card-body tab-content" style={{height:400}}>
+                <div className="tab-pane active" id="Description">
+                    <p className="card-text">Brief summary here about the location</p>
                 </div>
-                <div class="tab-pane" id="Waypoint">
-                    <p class=" card-text">Brief summary here about the location's waypoint or map informations</p>
+                <div className="tab-pane" id="Waypoint">
+                    <p className=" card-text">Brief summary here about the location's waypoint or map informations</p>
                 </div>
-                <div class="tab-pane" id="Conditions">
-                    <p class=" card-text">Brief summary here about the location's weather</p>
+                <div className="tab-pane" id="Conditions">
+                    <p className=" card-text">Brief summary here about the location's weather</p>
                 </div>
             </form>
                 {/* <form className="card-body tab-content" style={{height:400}}>

@@ -1,4 +1,5 @@
-import { useContext, useEffect, useState, useParams } from "react";
+import { useContext, useEffect, useState} from "react";
+import { useParams, Navigate } from "react-router-dom";
 import axios from "axios";
 
 import AuthContext from "../context/AuthContext";
@@ -8,23 +9,23 @@ import images from "../assets/assets.js";
 const UserProfile = () => {
   let { profile_owner } = useParams();
 
-  const [profile, setProfile] = useState([]);
+  const [profile, setProfile] = useState(
+    {
+      user:
+      {
+        'first_name': 'todd'
+      }
+    }
+  );
 
   const getProfile = () => {
-    fetch("http://127.0.0.1:8000/", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
+
+    axios.post("http://127.0.0.1:8000/api/profile/get", { 'user': profile_owner })
+    .then(response => {
+      console.log(response)
+      setProfile(response.data)
     })
-      .then(function (response) {
-        console.log(response);
-        return response.json();
-      })
-      .then(function (profile_json) {
-        console.log(profile_json);
-        setProfile(profile_json);
-      });
+
   };
 
   useEffect(() => {
@@ -53,7 +54,9 @@ const UserProfile = () => {
               style={{ height: 380 }}
             />
             <div className="card-img-overlay">
-              <h1 className="card-title">{profile.firstName}'s Profile</h1>
+              <h1 className="card-title">
+                {profile.user.first_name}'s Profile
+              </h1>
               <p className="card-text"></p>
             </div>
 
@@ -93,7 +96,7 @@ const UserProfile = () => {
               <form className="card-body tab-content" style={{ height: 400 }}>
                 <div className="tab-pane active" id="Bio">
                   <p className="card-text">
-                    Location: {profile.address.city}, {profile.address.state}
+                    Lorem Ipsum
                   </p>
                 </div>
                 <div className="tab-pane" id="Fav-Locations">

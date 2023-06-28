@@ -6,6 +6,12 @@ const Register = () => {
 
   const [input, setInput] = useState([]);
 
+  console.log(
+    JSON.stringify({
+      user: input.username,
+    })
+  );
+
   const registerUser = async () => {
 
     let response = await fetch("http://127.0.0.1:8000/users/", {
@@ -24,6 +30,18 @@ const Register = () => {
 
     if (response.status === 201) {
       alert("Congratulations you are now registered!");
+
+      let response = await fetch("http://127.0.0.1:8000/api/profile/add", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user: input.username,
+        }),
+      });
+
+
     } else {
       alert(response.status + ": " + JSON.stringify(data, null, 4));
     }
