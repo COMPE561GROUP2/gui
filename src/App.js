@@ -9,7 +9,8 @@ import Post1 from "./pages/Post1.js";
 import Register from "./pages/Register.js";
 import Activities from "./pages/Activities.js";
 import UserProfile from "./pages/UserProfile.js";
-import Location from "./pages/Location";
+import Location from "./pages/Location.js";
+import NotFound from "./pages/NotFound.js";
 
 import Navbar from "./elements/Navbar.js";
 import Footer from "./elements/Footer.js"
@@ -34,6 +35,7 @@ class App extends React.Component {
 
             <div id="content-wrap">
               <Routes>
+                <Route exact path="" element={<Home />} />
                 <Route exact path="home" element={<Home />} />
                 <Route exact path="help" element={<Help />} />
                 <Route exact path="activities" element={<Activities />} />
@@ -43,8 +45,13 @@ class App extends React.Component {
                 <Route exact path="login" element={<Login />} />
                 <Route exact path="register" element={<Register />} />
                 <Route exact path="location" element={<Location />} />
+                <Route exact path="404" element={<NotFound />} />
 
-                <Route exact path="user-profile/:username" element={<UserProfile />} />
+                <Route
+                  exact
+                  path="user-profile/:profile_owner"
+                  element={<UserProfile />}
+                />
 
                 <Route path="*" element={<Navigate to="home" replace />} />
               </Routes>
