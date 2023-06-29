@@ -39,7 +39,6 @@ const Activities = () => {
           </div>
           <br />
         </div>
-
       </section>
 
       <section id="Activities">
@@ -58,9 +57,9 @@ const Activities = () => {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <button style={{border: 'none'}}> 
-                    <NavLink to="/Locate_activity"  className="btn btn-success">
-                    La Jolla Scripps
+                  <button style={{ border: "none" }}>
+                    <NavLink to="/Location" className="btn btn-success">
+                      La Jolla Scripps
                     </NavLink>
                   </button>
                   <br /> <br />
@@ -74,12 +73,19 @@ const Activities = () => {
                     width={350}
                     height={350}
                   />
-                  <textarea
-                    name="tempPost"
-                    rows={15}
-                    cols={38}
-                    defaultValue={"Surfing is a captivating water sport that captures the essence of freedom and the power of the ocean. Riding the waves on a surfboard provides an exhilarating sensation of being in harmony with nature's elements. Surfers paddle out into the vast expanse of the ocean, patiently waiting for the perfect wave to catch. The feeling of effortlessly gliding across the water, the sound of crashing waves, and the salty breeze create a unique connection to the sea. Surfing is not just a sport; it's a way of life, embracing the thrill of the ocean and the endless pursuit of the perfect wave."}
-                  />
+                  <p style={{ marginTop: 20 }}>
+                    Surfing is a captivating water sport that captures the
+                    essence of freedom and the power of the ocean. Riding the
+                    waves on a surfboard provides an exhilarating sensation of
+                    being in harmony with nature's elements. Surfers paddle out
+                    into the vast expanse of the ocean, patiently waiting for
+                    the perfect wave to catch. The feeling of effortlessly
+                    gliding across the water, the sound of crashing waves, and
+                    the salty breeze create a unique connection to the sea.
+                    Surfing is not just a sport; it's a way of life, embracing
+                    the thrill of the ocean and the endless pursuit of the
+                    perfect wave.
+                  </p>
                 </div>
               </div>
             </div>
@@ -95,9 +101,9 @@ const Activities = () => {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <button style={{border: 'none'}}> 
-                    <NavLink to="/Location"  className="btn btn-success">
-                    Go Somewhere
+                  <button style={{ border: "none" }}>
+                    <NavLink to="/Location" className="btn btn-success">
+                      Go Somewhere
                     </NavLink>
                   </button>
                   <br /> <br />
@@ -111,12 +117,18 @@ const Activities = () => {
                     width={350}
                     height={350}
                   />
-                  <textarea
-                    name="tempPost"
-                    rows={15}
-                    cols={38}
-                    defaultValue={" Hiking is an invigorating outdoor activity that allows individuals to connect with nature and explore the beauty of the great outdoors. With every step along the winding trails, hikers can experience a sense of freedom and tranquility as they immerse themselves in breathtaking landscapes, surrounded by towering trees, majestic mountains, and cascading waterfalls. Hiking offers not only physical benefits but also a chance to clear the mind, find solace in solitude, and discover hidden wonders off the beaten path. "}
-                  />
+                  <p style={{ marginTop: 20 }}>
+                    Hiking is an invigorating outdoor activity that allows
+                    individuals to connect with nature and explore the beauty of
+                    the great outdoors. With every step along the winding
+                    trails, hikers can experience a sense of freedom and
+                    tranquility as they immerse themselves in breathtaking
+                    landscapes, surrounded by towering trees, majestic
+                    mountains, and cascading waterfalls. Hiking offers not only
+                    physical benefits but also a chance to clear the mind, find
+                    solace in solitude, and discover hidden wonders off the
+                    beaten path.
+                  </p>
                 </div>
               </div>
             </div>
@@ -132,9 +144,9 @@ const Activities = () => {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <button style={{border: 'none'}}> 
-                    <NavLink to="/Location"  className="btn btn-success">
-                    Go Somewhere
+                  <button style={{ border: "none" }}>
+                    <NavLink to="/Location" className="btn btn-success">
+                      Go Somewhere
                     </NavLink>
                   </button>
                   <br /> <br />
@@ -148,12 +160,17 @@ const Activities = () => {
                     width={350}
                     height={350}
                   />
-                  <textarea
-                    name="tempPost"
-                    rows={15}
-                    cols={38}
-                    defaultValue={" Skiing is a thrilling winter sport that brings joy to countless individuals around the world. As skiers glide down snow-covered slopes, they experience an exhilarating sense of freedom and a rush of adrenaline. The crisp mountain air, stunning snowy vistas, and the sound of skis carving through the powder create an unforgettable experience. Whether it's gracefully carving turns on groomed trails or seeking the thrill of off-piste adventures, skiing offers an escape from everyday life and a chance to embrace the beauty of winter. "}
-                  />
+                  <p style={{ marginTop: 20 }}>
+                    Skiing is a thrilling winter sport that brings joy to
+                    countless individuals around the world. As skiers glide down
+                    snow-covered slopes, they experience an exhilarating sense
+                    of freedom and a rush of adrenaline. The crisp mountain air,
+                    stunning snowy vistas, and the sound of skis carving through
+                    the powder create an unforgettable experience. Whether it's
+                    gracefully carving turns on groomed trails or seeking the
+                    thrill of off-piste adventures, skiing offers an escape from
+                    everyday life and a chance to embrace the beauty of winter.
+                  </p>
                 </div>
               </div>
             </div>
