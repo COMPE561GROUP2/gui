@@ -11,7 +11,7 @@ const UserProfile = () => {
 
   const [profile, setProfile] = useState([]);
 
-  const getProfile = () => {
+  const getProfile = (profile_owner) => {
 
     axios.post("http://127.0.0.1:8000/api/profile/get", { 'user': profile_owner })
     .then(response => {
@@ -23,10 +23,11 @@ const UserProfile = () => {
     })
 
   };
-
+  
   useEffect(() => {
-    getProfile();
-  }, [profile]);
+    getProfile(profile_owner);
+
+  }, [profile_owner]);
 
   return (
     <>
