@@ -21,7 +21,6 @@ const Activities = () => {
       <section>
         <div className="container">
           <h1 style={{ textAlign: "center", paddingTop: "5%" }}>
-            {" "}
             Find your outdoors
           </h1>
           <div className="input-group rounded pt-3">
@@ -54,12 +53,11 @@ const Activities = () => {
                 <div className="card-body">
                   <h5 className="card-title">Surfing</h5>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    Discover all the best surfing locations near you!
                   </p>
                   <button style={{ border: "none" }}>
                     <NavLink to="/Location" className="btn btn-success">
-                      La Jolla Scripps
+                      Surfing
                     </NavLink>
                   </button>
                   <br /> <br />
@@ -98,12 +96,11 @@ const Activities = () => {
                 <div className="card-body">
                   <h5 className="card-title">Hiking</h5>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    Discover all the best hiking locations near you!
                   </p>
                   <button style={{ border: "none" }}>
                     <NavLink to="/Location" className="btn btn-success">
-                      Go Somewhere
+                      Hiking
                     </NavLink>
                   </button>
                   <br /> <br />
@@ -139,14 +136,13 @@ const Activities = () => {
               <div className="card">
                 <img src={images.ski1} className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
+                  <h5 className="card-title">Skiing</h5>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    Discover all the best skiing locations near you!
                   </p>
                   <button style={{ border: "none" }}>
                     <NavLink to="/Location" className="btn btn-success">
-                      Go Somewhere
+                      Skiing
                     </NavLink>
                   </button>
                   <br /> <br />
