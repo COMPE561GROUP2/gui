@@ -168,7 +168,7 @@ const Activities = () => {
                     </button>
                     {/* <!-- Modal --> */}
                     <div className="modal fade" id="Map1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div className="modal-dialog">
+                      <div className="modal-dialog modal-lg" role="document">
                         <div className="modal-content" style={{width:800, position:"absolute", top:0, left:-150}}>
                           <div className="modal-body mb-0 p-0">
                             <div className="z-depth-1-half map-container-9" style={{height:460}}>
