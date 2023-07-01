@@ -113,19 +113,19 @@ const Navbar = () => {
             {/*Display Login button if user is not logged in
                Display Logout button if user is logged in*/}
 
-            <button type="button" className="btn btn-success">
+            <button type="button" className="btn btn-success" style={{background: "rgb(23, 85, 44)"}}>
               {user ? (
                 <NavLink
                   to="/home"
                   onClick={logoutUser}
-                  style={{ textDecoration: "none", color: "black" }}
+                  style={{ textDecoration: "none", color: "white" }}
                 >
                   Log Out
                 </NavLink>
               ) : (
                 <NavLink
                   to="/login"
-                  style={{ textDecoration: "none", color: "black" }}
+                  style={{ textDecoration: "none", color: "white" }}
                 >
                   Log In
                 </NavLink>
