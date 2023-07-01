@@ -5,7 +5,7 @@ const images = {
   surf1: require("./surf1.jpg"),
   surf2: require("./surf2.jpg"),
   surf_logo: require("./surf_logo.jpg"),
-  ski1: require("./ski1.png"),
+  ski1: require("./ski1.jpg"),
 };
 
 export default images;
