@@ -47,7 +47,10 @@ const Blog = () => {
             <div className="row gx-4 gx-lg-5 justify-content-center">
               <div className="col-md-10 col-lg-8 col-xl-7">
                 <div className="site-heading">
-                  <h1>Adventure Log</h1>
+
+                  <h1 style={{textAlign: "center", margin: 40}}>
+                    Adventure Log
+                  </h1>
 
                 </div>
               </div>
@@ -55,6 +58,7 @@ const Blog = () => {
           </div>
         </header>
         <br></br>
+
         {/* Main Content*/}
         
         <div className="container">
@@ -96,7 +100,7 @@ const Blog = () => {
             <div className="row g-0">
               <div className="col-md-4">
 
-    <img src={images.hike_logo} className="img-fluid rounded-start" alt="..."/>
+              <img src={images.hike_logo} className="img-fluid rounded-start" alt="..."/>
 
               </div>
               <div className="col-md-8">

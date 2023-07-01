@@ -40,7 +40,7 @@ const Post = () => {
               Posted by <NavLink to="/user-profile/joe_smith">Joe Smith</NavLink> on August 24, 2023
             </span>
           </h2>
-          <img src={images.JWSTimage} alt="James Web Telescope Image" style={{
+          <img src={images.JWSTimage} alt="James Web Telescope" style={{
             height: 500, width: 800, margin: "auto", paddingTop: 20
           }} />
           <div style={{marginLeft:100, marginRight:100, paddingBottom: 40, paddingTop: 20}}>
