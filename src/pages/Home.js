@@ -38,10 +38,10 @@ const Home = () => {
       </section>
       <section id="Activities">
         <h2 className="text-center my-3">Top 3 Local Favorites</h2>
-        <div className="container">
+        <div className="container" style={{height:1000}}>
           <div className="row">
             <div className="col-lg">
-              <div className="card">
+              <div className="card" style={{height:800}}>
                 <img src={images.hike1} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Zion National Park</h5>
@@ -56,16 +56,29 @@ const Home = () => {
                     adrenaline-pumping ascent of Angels Landing, offering
                     panoramic views that leave you breathless.
                   </p>
-                  <button style={{backgroundColor:"transparent", border:'none'}}>
+
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: "0",
+                      left: "0",
+                      width: "100%",
+                      padding: "25px",
+                      textAlign: "center"
+                    }}
+                  >
+                    <button style={{backgroundColor:"transparent", border:'none'}}>
                     <NavLink to="/Location" className="btn btn-success">
                       Go Somewhere
                     </NavLink>
                   </button>
+                  </div>
+                  
                 </div>
               </div>
             </div>
             <div className="col-lg">
-              <div className="card">
+              <div className="card" style={{height:800}}>
                 <img src={images.surf1} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">La Jolla Beach</h5>
@@ -79,16 +92,27 @@ const Home = () => {
                     for beachgoers, from sunbathing and picnicking to swimming
                     and surfing in the Pacific Ocean's refreshing waves.
                   </p>
-                  <button style={{backgroundColor:"transparent", border:'none'}}>
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: "0",
+                      left: "0",
+                      width: "100%",
+                      padding: "25px",
+                      textAlign: "center"
+                    }}
+                  >
+                    <button style={{backgroundColor:"transparent", border:'none'}}>
                     <NavLink to="/Location" className="btn btn-success">
                       Go Somewhere
                     </NavLink>
                   </button>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col-lg">
-              <div className="card">
+              <div className="card" style={{height:800}}>
                 <img src={images.hike2} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Mt. Everest</h5>
@@ -101,11 +125,22 @@ const Home = () => {
                     formidable heights is a remarkable feat that pushes the
                     limits of human strength and determination.
                   </p>
-                  <button style={{backgroundColor:"transparent", border:'none'}}>
-                      <NavLink to="/Location" className="btn btn-success">
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: "0",
+                      left: "0",
+                      width: "100%",
+                      padding: "25px",
+                      textAlign: "center"
+                    }}
+                  >
+                    <button style={{backgroundColor:"transparent", border:'none'}}>
+                    <NavLink to="/Location" className="btn btn-success">
                       Go Somewhere
                     </NavLink>
                   </button>
+                  </div>
                 </div>
               </div>
             </div>
