@@ -16,20 +16,19 @@ const Login = () => {
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
         crossOrigin="anonymous"
       />
-      <div className="body">
+      <div className="container" style={{height:1000}}>
         <br /> <br />
-        <h2 className="loginTextHeader">
-          {" "}
-          Please Enter Your Login Information{" "}
-        </h2>
-        <br /> <br />
-        <form className="loginSection" onSubmit={loginUser}>
+        
+        <div className="card" style={{width:600, margin:"auto"}}> 
+          <h2 className="card-title" style={{textAlign:"center", paddingTop:40}}>Please Enter Your Login Information</h2>
+          <form className="loginSection" onSubmit={loginUser}>
+            <br /><br />
           <label htmlFor="userID"> Username or Email:</label>
-          <br />
+          <br/><br/>
           <input type="text" name="userID" id="userID" placeholder="UserID" />
           <br /> <br />
           <label htmlFor="password"> Password:</label>
-          <br />
+          <br/><br/>
           <input
             type="password"
             name="password"
@@ -38,14 +37,18 @@ const Login = () => {
             autoComplete="on"
           />
           <br /> <br />
-          <button type="submit" id="loginSubmitButton">
+          <button type="submit" id="loginSubmitButton" className="btn btn-success">
             Log In
-          </button>
+            </button>
+            
           <br /> <br />
           <NavLink to="/Register">
-            <button>Register</button>
-          </NavLink>
+            <button className="btn btn-success">Register</button>
+            </NavLink>
+            <br/><br/><br/>
         </form>
+        </div>
+        
       </div>
     </>
   );
