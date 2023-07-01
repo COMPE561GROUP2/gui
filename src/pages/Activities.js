@@ -64,7 +64,7 @@ const Activities = () => {
                       </NavLink>
                     </button>
                     <button type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#Map1">
-                      Map
+                    <i class="fa-solid fa-map"></i> Map
                     </button>
                     {/* <!-- Modal --> */}
                     <div className="modal fade" id="Map1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -85,7 +85,7 @@ const Activities = () => {
                             </div>
                           </div>
                           <div className="modal-footer justify-content-center">
-                            <button type="button" className="btn btn-success">Save location</button>
+                            <button type="button" className="btn btn-success">Save location<i className="bi bi-map"></i></button>
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                           </div>
                         </div>
@@ -114,7 +114,7 @@ const Activities = () => {
                       </NavLink>
                     </button>
                     <button type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#Map1">
-                      Map
+                    <i class="fa-solid fa-map"></i> Map
                     </button>
                     {/* <!-- Modal --> */}
                     <div className="modal fade" id="Map1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -164,7 +164,7 @@ const Activities = () => {
                       </NavLink>
                     </button>
                     <button type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#Map1">
-                      Map
+                    <i class="fa-solid fa-map"></i> Map
                     </button>
                     {/* <!-- Modal --> */}
                     <div className="modal fade" id="Map1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
