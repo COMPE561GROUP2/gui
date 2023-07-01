@@ -65,7 +65,7 @@ const Blog = () => {
           <div className="card mb-3">
             <div className="row g-0">
               <div className="col-md-4">
-             <img src={images.hike1} className="img-fluid rounded-start" alt="..."/>
+                <img src={images.JWSTimage} className="img-fluid rounded-start" alt="..." style={{height:250, width:500}} />
               </div>
               <div className="col-md-8">
                 <div className="card-body">
@@ -79,13 +79,25 @@ const Blog = () => {
                     Posted by <NavLink to="/user-profile/joe_smith">Joe Smith</NavLink> on
                     September 21, 2023
                   </p>
-
-                  <button style={{backgroundColor:"transparent", border: "none" }}>
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: "0",
+                      left: "0",
+                      width: "100%",
+                      padding: "10px",
+                      textAlign: "left",
+                      paddingLeft: 440
+                    }}
+                  >
+                    <button style={{backgroundColor:"transparent", border: "none" }}>
                     
                     <NavLink to="/Post" className="btn btn-success">
                       Go
                     </NavLink>
                   </button>
+                  </div>
+                  
                   {/* <!-- Modal --> */}
                 </div>
               </div>
@@ -100,7 +112,7 @@ const Blog = () => {
             <div className="row g-0">
               <div className="col-md-4">
 
-              <img src={images.hike_logo} className="img-fluid rounded-start" alt="..."/>
+              <img src={images.JapaneseFriendshipGarden} className="img-fluid rounded-start" alt="..." style={{height:250, width:500}}/>
 
               </div>
               <div className="col-md-8">
@@ -116,12 +128,24 @@ const Blog = () => {
                     Posted by <NavLink to="/user-profile/joe_smith">Joe Smith</NavLink> on
                     September 18, 2023
                   </p>
-                  
-                  <button style={{backgroundColor:"transparent", border: "none" }}>
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: "0",
+                      left: "0",
+                      width: "100%",
+                      padding: "10px",
+                      textAlign: "left",
+                      paddingLeft: 440
+                    }}
+                  >
+                    <button style={{backgroundColor:"transparent", border: "none" }}>
                     <NavLink to="/Post1" className="btn btn-success">
                       Go
                     </NavLink>
                   </button>
+                  </div>
+                  
                   
                   {/* <!-- Modal --> */}
                 </div>
