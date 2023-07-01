@@ -69,7 +69,7 @@ const Home = () => {
                   >
                     <button style={{backgroundColor:"transparent", border:'none'}}>
                     <NavLink to="/Location" className="btn btn-success">
-                      Go Somewhere
+                    <i class="fa-solid fa-map"></i>Go Somewhere
                     </NavLink>
                   </button>
                   </div>
