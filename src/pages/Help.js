@@ -21,7 +21,7 @@ const Help = () => {
         Help &amp; FAQ
       </h1>
 
-
+      <div className='container'>
       <div className="body">
         <div className="accordion" id="accordionExample">
           <div className="accordion-item">
@@ -148,6 +148,8 @@ const Help = () => {
             </div>
           </div>
         </div>
+      </div>
+      
 
         <Private>
           <div
