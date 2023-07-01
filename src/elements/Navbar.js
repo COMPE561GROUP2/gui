@@ -30,6 +30,7 @@ const Navbar = () => {
             ".navbar-custom {background-color: rgb(20, 137, 73);} .navbar-custom .navbar-brand, .navbar-custom .nav-link,.navbar-custom .navbar-nav, .navbar-custom .navbar-text {color: dark-green;}",
         }}
       />
+      
       <nav className="navbar navbar-expand-lg navbar-custom">
         <div className="container-fluid">
           <Link to="/home">
@@ -101,7 +102,7 @@ const Navbar = () => {
                   onClick={clickNav}
                   className={({ isActive }) =>
                     isActive ? "nav-link active" : "nav-link"
-                  }
+                  } 
                 >
                   Help
                 </NavLink>
