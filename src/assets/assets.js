@@ -7,6 +7,7 @@ const images = {
   surf_logo: require("./surf_logo.jpg"),
   ski1: require("./ski1.jpg"),
   JWSTimage: require("./JWSTimage.jpg"),
+  JapaneseFriendshipGarden: require("./JapaneseFriendshipGarden.jpg")
 };
 
 export default images;
