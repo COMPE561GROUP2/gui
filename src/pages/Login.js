@@ -19,7 +19,7 @@ const Login = () => {
       <div className="container" style={{height:1000}}>
         <br /> <br />
         
-        <div className="card" style={{width:600, margin:"auto"}}> 
+        <div className="card" style={{width:700, margin:"auto"}}> 
           <h2 className="card-title" style={{textAlign:"center", paddingTop:40}}>Please Enter Your Login Information</h2>
           <form className="loginSection" onSubmit={loginUser}>
             <br /><br />
@@ -36,16 +36,16 @@ const Login = () => {
             placeholder="Password"
             autoComplete="on"
           />
-          <br /> <br />
+          <br /> <br /> <br/>
           <button type="submit" id="loginSubmitButton" className="btn btn-success">
             Log In
             </button>
             
-          <br /> <br />
+          <br /> <br /> <br/>
           <NavLink to="/Register">
             <button className="btn btn-success">Register</button>
             </NavLink>
-            <br/><br/><br/>
+            <br/><br/><br/> 
         </form>
         </div>
         

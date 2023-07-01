@@ -68,9 +68,10 @@ const Register = () => {
           integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
           crossOrigin="anonymous"
         />
-        <br /> <br />
-        <h2 className="loginTextHeader">Make an Account</h2>
-        <br /> <br />
+        <br/><br/>
+        <div className="card" style={{width:700, margin:"auto"}}> 
+          <h2 className="card-title" style={{ textAlign: "center", paddingTop: 40 }}>Please Enter Your Information to Register</h2>
+          
         <form
           className="loginSection"
           onSubmit={(e) => {
@@ -83,9 +84,10 @@ const Register = () => {
               // password2: e.target.password2.value,
             });
           }}
-        >
+          >
+            <br /> <br />
           <label htmlFor="usernameText"> Username:</label>
-          <br />
+          <br/><br/>
           <input
             type="text"
             name="username"
@@ -94,7 +96,7 @@ const Register = () => {
           />
           <br /> <br />
           <label htmlFor="userEmail"> Email:</label>
-          <br />
+          <br /><br/>
           <input type="text" name="email" id="userEmail" placeholder="Email" />
           <br /> <br />
           {/* <label htmlFor="userPhoneNumber"> Phone Number:</label>
@@ -107,7 +109,7 @@ const Register = () => {
           />
           <br /> <br /> */}
           <label htmlFor="password"> Password:</label>
-          <br />
+          <br /><br/>
           <input
             type="password"
             name="password"
@@ -124,11 +126,14 @@ const Register = () => {
             id="user_password2"
             placeholder="Re-enter Password"
           /> */}
-          <br /> <br />
-          <button type="submit" id="registerSubmitButton">
+          <br /> <br /> <br/>
+          <button type="submit" id="registerSubmitButton" className="btn btn-success">
             Register
-          </button>
+            </button>
+            <br/> <br/> <br/>
         </form>
+        </div>
+        
       </div>
     </>
   );
