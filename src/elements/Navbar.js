@@ -27,9 +27,10 @@ const Navbar = () => {
       <style
         dangerouslySetInnerHTML={{
           __html:
-            ".navbar-custom {background-color: rgb(163, 207, 187);} .navbar-custom .navbar-brand, .navbar-custom .nav-link,.navbar-custom .navbar-nav, .navbar-custom .navbar-text {color: green;}",
+            ".navbar-custom {background-color: rgb(20, 137, 73);} .navbar-custom .navbar-brand, .navbar-custom .nav-link,.navbar-custom .navbar-nav, .navbar-custom .navbar-text {color: dark-green;}",
         }}
       />
+      
       <nav className="navbar navbar-expand-lg navbar-custom">
         <div className="container-fluid">
           <Link to="/home">
@@ -101,7 +102,7 @@ const Navbar = () => {
                   onClick={clickNav}
                   className={({ isActive }) =>
                     isActive ? "nav-link active" : "nav-link"
-                  }
+                  } 
                 >
                   Help
                 </NavLink>
@@ -113,19 +114,19 @@ const Navbar = () => {
             {/*Display Login button if user is not logged in
                Display Logout button if user is logged in*/}
 
-            <button type="button" className="btn btn-success">
+            <button type="button" className="btn btn-success" style={{background: "rgb(23, 85, 44)"}}>
               {user ? (
                 <NavLink
                   to="/home"
                   onClick={logoutUser}
-                  style={{ textDecoration: "none", color: "black" }}
+                  style={{ textDecoration: "none", color: "white" }}
                 >
                   Log Out
                 </NavLink>
               ) : (
                 <NavLink
                   to="/login"
-                  style={{ textDecoration: "none", color: "black" }}
+                  style={{ textDecoration: "none", color: "white" }}
                 >
                   Log In
                 </NavLink>
