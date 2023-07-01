@@ -56,7 +56,7 @@ const Home = () => {
                     adrenaline-pumping ascent of Angels Landing, offering
                     panoramic views that leave you breathless.
                   </p>
-                  <button style={{ border: "none" }}>
+                  <button style={{backgroundColor:"transparent", border:'none'}}>
                     <NavLink to="/Location" className="btn btn-success">
                       Go Somewhere
                     </NavLink>
@@ -79,7 +79,7 @@ const Home = () => {
                     for beachgoers, from sunbathing and picnicking to swimming
                     and surfing in the Pacific Ocean's refreshing waves.
                   </p>
-                  <button style={{ border: "none" }}>
+                  <button style={{backgroundColor:"transparent", border:'none'}}>
                     <NavLink to="/Location" className="btn btn-success">
                       Go Somewhere
                     </NavLink>
@@ -101,8 +101,8 @@ const Home = () => {
                     formidable heights is a remarkable feat that pushes the
                     limits of human strength and determination.
                   </p>
-                  <button style={{ border: "none" }}>
-                    <NavLink to="/Location" className="btn btn-success">
+                  <button style={{backgroundColor:"transparent", border:'none'}}>
+                      <NavLink to="/Location" className="btn btn-success">
                       Go Somewhere
                     </NavLink>
                   </button>

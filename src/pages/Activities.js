@@ -2,9 +2,6 @@ import images from "../assets/assets.js";
 import { NavLink } from "react-router-dom";
 
 const Activities = () => {
-
-
-
   return (
     <>
       <title>Touch Grass - Activities</title>
@@ -20,8 +17,50 @@ const Activities = () => {
 
       <section>
         <div className="container">
+          <div className="card mb-3">
+            <div className="row g-0">
+              <div className="col-md-4">
+                <img src={images.surf1} className="img-fluid rounded-start" alt="..."/>
+              </div>
+              <div className="col-md-8">
+                <div className="card-body">
+                  <h5 className="card-title">Card title</h5>
+                  <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p className="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <button style={{backgroundColor:"transparent", border: "none" }}>
+                    <NavLink to="/Location" className="btn btn-success">
+                      Surfing
+                    </NavLink>
+                  </button>
+                  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Map1">
+                    Map
+                  </button>
+                  {/* <!-- Modal --> */}
+                  <div class="modal fade" id="Map1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="container">
           <h1 style={{ textAlign: "center", paddingTop: "5%" }}>
-            Find your outdoors
+            Find Your Outdoors
           </h1>
           <div className="input-group rounded pt-3">
             <input
