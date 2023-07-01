@@ -21,8 +21,9 @@ const Help = () => {
         Help &amp; FAQ
       </h1>
 
-      <div className='container'>
-      <div className="body">
+      <div className='container body'>
+
+      <div style={{marginBottom: 110}}>
         <div className="accordion" id="accordionExample">
           <div className="accordion-item">
             <h2 className="accordion-header">
@@ -192,7 +193,7 @@ const Help = () => {
           </div>
         </Private>
 
-        
+
       </div>
     </>
   );
