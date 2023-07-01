@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import images from "../assets/assets.js";
 
 const Post = () => {
   return (
@@ -29,30 +30,21 @@ const Post = () => {
   <header
     className="masthead"
     style={{ backgroundImage: 'url("assets/img/post-bg.jpg")' }}
-  >
-    <div className="container position-relative px-4 px-lg-5">
-      <div className="row gx-4 gx-lg-5 justify-content-center">
-        <div className="col-md-10 col-lg-8 col-xl-7">
-          <div className="post-heading">
-            <h1>Man must explore, and this is exploration at its greatest</h1>
-            <h2 className="subheading">
-              Problems look mighty small from 150 miles up
-            </h2>
+      >
+        <br/><br/>
+        <div className="card" style={{width:1000, margin:"auto"}}> 
+          <h2 className="card-title" style={{ textAlign: "center", paddingTop: 40 }}>Man must explore, and this is exploration at its greatest</h2>
+          <h2 className="subheading" style={{ textAlign: "center", paddingTop: 20, fontSize: 24 }}>Problems look mighty small from 150 miles up</h2>
+          <h2 className="subheading" style={{ textAlign: "center", paddingTop: 10, fontSize: 16 }}>
             <span className="meta">
-              Posted by
-              on August 24, 2023
+              Posted by <NavLink to="/user-profile/joe_smith">Joe Smith</NavLink> on August 24, 2023
             </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  {/* Post Content*/}
-  <article className="mb-4">
-    <div className="container px-4 px-lg-5">
-      <div className="row gx-4 gx-lg-5 justify-content-center">
-        <div className="col-md-10 col-lg-8 col-xl-7">
-          <p>
+          </h2>
+          <img src={images.JWSTimage} alt="James Web Telescope Image" style={{
+            height: 500, width: 800, margin: "auto", paddingTop: 20
+          }} />
+          <div style={{marginLeft:100, marginRight:100, paddingBottom: 40, paddingTop: 20}}>
+            <p>
             Never in all their history have men been able truly to conceive of
             the world as one: a single sphere, a globe, having the qualities of
             a globe, a round earth in which all the directions eventually meet,
@@ -137,16 +129,13 @@ const Post = () => {
             explore, and this is exploration at its greatest.
           </p>
           <p>
-            Placeholder text by
-            <a href="http://spaceipsum.com/">Space Ipsum</a>· Images by
-            <a href="https://www.flickr.com/photos/nasacommons/">
-              NASA on The Commons
-            </a>
+            Placeholder text by <a href="http://spaceipsum.com/"> Space Ipsum</a> · Images by <a href="https://www.flickr.com/photos/nasacommons/"> NASA on The Commons </a>
           </p>
+          </div>
         </div>
-      </div>
-    </div>
-  </article>
+    
+  </header>
+  
   {/* Footer*/}
   <footer className="border-top">
     <div className="container px-4 px-lg-5">
