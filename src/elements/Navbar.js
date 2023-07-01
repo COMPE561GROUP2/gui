@@ -27,7 +27,7 @@ const Navbar = () => {
       <style
         dangerouslySetInnerHTML={{
           __html:
-            ".navbar-custom {background-color: rgb(163, 207, 187);} .navbar-custom .navbar-brand, .navbar-custom .nav-link,.navbar-custom .navbar-nav, .navbar-custom .navbar-text {color: green;}",
+            ".navbar-custom {background-color: rgb(20, 137, 73);} .navbar-custom .navbar-brand, .navbar-custom .nav-link,.navbar-custom .navbar-nav, .navbar-custom .navbar-text {color: dark-green;}",
         }}
       />
       <nav className="navbar navbar-expand-lg navbar-custom">

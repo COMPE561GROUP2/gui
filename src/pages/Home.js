@@ -39,9 +39,9 @@ const Home = () => {
       <section id="Activities">
         <h2 className="text-center my-3">Top 3 Local Favorites</h2>
         <div className="container">
-          <div className="row gy-3">
-            <div className="col-md-4">
-              <div className="card h-100">
+          <div className="row">
+            <div className="col-lg">
+              <div className="card">
                 <img src={images.hike1} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Zion National Park</h5>
@@ -64,8 +64,8 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
-              <div className="card h-100">
+            <div className="col-lg">
+              <div className="card">
                 <img src={images.surf1} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">La Jolla Beach</h5>
@@ -87,8 +87,8 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
-              <div className="card h-100">
+            <div className="col-lg">
+              <div className="card">
                 <img src={images.hike2} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Mt. Everest</h5>
