@@ -153,50 +153,9 @@ const Help = () => {
       
 
         <Private>
-          <div className="container" style={{height:1000}}>
-        <br /> <br />
-        
-        <div className="card" style={{width:700, margin:"auto"}}> 
-          <h2 className="card-title" style={{textAlign:"center", paddingTop:40}}>Do you have any other questions?</h2>
-            <br /><br />
-          <label htmlFor="name"> Username</label>
-          <br/><br/>
-          <input type="text" name="userName" id="userName" placeholder="Username"/>
-          <br /> <br />
-          <label htmlFor="email"> Email</label>
-          <br/><br/>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-            autoComplete="on"
-          />
-          <br /> <br /> <br/>
-              <button type="submit" id="emailSubmissionButton" className="btn btn-success">
-                
-                <br /> <br /> <br />
-                
-                <textarea
-                name="message"
-                rows={10}
-                cols={30}
-                defaultValue={" What would you like to say? "}
-                />
-                
-             <br /> <br /> <br />   
-            Submit
-            </button>
-            
-            <br/><br/><br/> 
-        </div>
-        
-      </div>
-
-
           <div
             className="center"
-            style={{ backgroundColor: "rgb(207, 190, 163)" }}
+            style={{ backgroundColor: "white", width:625, height:625, margin:"auto"}}
           >
             <h1 className="center">
               Got Another Question?
@@ -204,27 +163,27 @@ const Help = () => {
             </h1>
             <h3>Submit Here!</h3>
             <form>
-              <label htmlFor="name"> Name : </label>
+              <label htmlFor="name"> Name: </label> <br/> <br/>
               <input
                 type="text"
                 name="name"
                 id="name"
-                defaultValue="Your Name Here"
+                placeholder="Your Name Here"
               />
-              <br />
-              <label htmlFor="email"> Email : </label>
+              <br /><br/>
+              <label htmlFor="email"> Email: </label> <br/> <br/>
               <input
                 type="text"
                 name="email"
                 id="email"
-                defaultValue="Your Email Here"
+                placeholder="Your Email Here"
               />
-              <br />
+              <br /> <br/>
               <textarea
                 name="message"
                 rows={10}
                 cols={30}
-                defaultValue={" What would you like to say? "}
+                placeholder={" What would you like to say? "}
               />
               <br /> <br />
             </form>
