@@ -21,7 +21,7 @@ const Help = () => {
         Help &amp; FAQ
       </h1>
 
-      <div className='container body'>
+      <div className='container' style={{height:1250}}>
 
       <div style={{marginBottom: 110}}>
         <div className="accordion" id="accordionExample">
