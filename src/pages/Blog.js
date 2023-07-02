@@ -5,7 +5,7 @@ const Blog = () => {
   return (
     <>
     
-      <div className="container-fluid" style={{ height: 1000 }}>
+      <div className="container-fluid" style={{height:883}}>
         <meta charSet="utf-8" />
         <meta
           name="viewport"
