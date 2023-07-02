@@ -56,11 +56,12 @@ const Activities = () => {
                 <div className="col-md-8">
                   <div className="card-body">
                     <h5 className="card-title">Surfing</h5>
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                    <button style={{backgroundColor:"transparent", border: "none" }}>
+                    <p className="card-text">
+                    Surfing is the ultimate water sport, where you ride waves and immerse yourself in the thrill of the ocean. It combines athleticism, excitement, and a deep connection with nature. Join the surfers' community and experience the exhilaration of catching waves and riding them with pure joy.
+                    </p>
+                    <button style={{backgroundColor:"transparent", border: "none"}}>
                       <NavLink to="/Location" className="btn btn-success">
-                        Surfing
+                       See All
                       </NavLink>
                     </button>
                     <button type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#Map1">
@@ -106,11 +107,12 @@ const Activities = () => {
                 <div className="col-md-8">
                   <div className="card-body">
                     <h5 className="card-title">Hiking</h5>
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                    <p className="card-text">
+                    Explore Nature's Beauty, Discover Adventure. Experience the joy of wandering through picturesque trails, immersing yourself in the tranquility of the great outdoors, and uncovering hidden gems along the way. Whether you seek peaceful forest walks or challenging mountain ascents, hiking offers a thrilling escape and a profound connection with nature.
+                    </p>
                     <button style={{backgroundColor:"transparent", border: "none" }}>
                       <NavLink to="/Location" className="btn btn-success">
-                        Surfing
+                        See All
                       </NavLink>
                     </button>
                     <button type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#Map1">
@@ -156,11 +158,12 @@ const Activities = () => {
                 <div className="col-md-8">
                   <div className="card-body">
                     <h5 className="card-title">Skiing</h5>
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                    <p className="card-text">
+                    Glide down snow-covered slopes, feel the rush of speed, and embrace the exhilarating winter adventure. Whether you're a beginner or an expert, skiing offers an unmatched combination of skill, beauty, and excitement on the mountains. So gear up, hit the slopes, and let the thrill of skiing ignite your winter experience.
+                    </p>
                     <button style={{backgroundColor:"transparent", border: "none" }}>
                       <NavLink to="/Location" className="btn btn-success">
-                        Surfing
+                       See All
                       </NavLink>
                     </button>
                     <button type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#Map1">
